@@ -1,14 +1,14 @@
 #EXTM3U
 
-##EXTINF:-1,AXN",
+##EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",,AXN",
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/12.m3u8
-##EXTINF:-1,Baby TV",
+##EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",Baby TV",
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/10.m3u8
 
-##EXTINF:-1,26
+##EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",26
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/11.m3u8
 
-##EXTINF:-1,5DIAS",
+##EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",5DIAS",
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/12.m3u8
 ##EXTINF:-1,Cine Familiar
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/13.m3u8
