@@ -1,249 +1,87 @@
 #EXTM3U
 
-#EXTINF:-1,Canal 1
+########## 📺 TV GENERAL ##########
+#EXTINF:-1 group-title="TV GENERAL",Canal 1
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/12.m3u8
-#EXTINF:-1,Canal 2
+#EXTINF:-1 group-title="TV GENERAL",Canal 2
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/10.m3u8
-
-#EXTINF:-1,Canal 3
+#EXTINF:-1 group-title="TV GENERAL",Canal 3
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/11.m3u8
-
-#EXTINF:-1,Canal 4
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/12.m3u8
-#EXTINF:-1,Canal 5
+#EXTINF:-1 group-title="TV GENERAL",Canal 5
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/13.m3u8
-
-#EXTINF:-1,Canal 6
+#EXTINF:-1 group-title="TV GENERAL",Canal 6
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/14.m3u8
 
-#EXTINF:-1,Canal 7
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/15.m3u8
-#EXTINF:-1,Canal 8
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/16.m3u8
-
-#EXTINF:-1,Canal 9
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/17.m3u8
-
-#EXTINF:-1,Canal 10
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/18.m3u8
-#EXTINF:-1,Canal 11
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/19.m3u8
-
-#EXTINF:-1,Canal 12
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/20.m3u8
-
-#EXTINF:-1,Canal 13
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/21.m3u8
-#EXTINF:-1,Canal 14
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/22.m3u8
-
-#EXTINF:-1,Canal 15
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/23.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Deportes" group-title="demo",ESPN6
+########## ⚽ DEPORTES ##########
+#EXTINF:-1 group-title="DEPORTES",ESPN
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/89.m3u8
+#EXTINF:-1 group-title="DEPORTES",ESPN3
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/90.m3u8
+#EXTINF:-1 group-title="DEPORTES",ESPN4
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/91.m3u8
+#EXTINF:-1 group-title="DEPORTES",ESPN6
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/24.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",ESPN7
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/25.m3u8
+#EXTINF:-1 group-title="DEPORTES",TyC Sports
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/60.m3u8
+#EXTINF:-1 group-title="DEPORTES",TNT Sports Premium
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/86.m3u8
+#EXTINF:-1 group-title="DEPORTES",Tigo Sports
+https://live.enhdtv.com:8081/8160/index.m3u8
 
-#EXTINF:-1 tvg-id="canal2" tvg-name="Deportes" group-title="DEMO",EWTN
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/26.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Noticias" group-title="demo",Flay Play
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/27.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Canal Demo 1
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/28.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",FILM&ARTS
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/29.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",HBO2
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/30.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",HBO Family
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/31.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",HBO
+########## 🎬 PELÍCULAS ##########
+#EXTINF:-1 group-title="PELÍCULAS",HBO
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/32.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",HBO Mundi
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/33.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",HBO Signature
+#EXTINF:-1 group-title="PELÍCULAS",HBO 2
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/30.m3u8
+#EXTINF:-1 group-title="PELÍCULAS",HBO Family
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/31.m3u8
+#EXTINF:-1 group-title="PELÍCULAS",HBO Signature
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/34.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",HBO Extreme
+#EXTINF:-1 group-title="PELÍCULAS",HBO Extreme
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/35.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",HBO+
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/36.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",History 
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/37.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",HOLA TV
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/38.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",H y H Discovery
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/39.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",H TV
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/40.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",Discovery ID
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/41.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",AMC Series
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/42.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",TV N Padeltime
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/43.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",A3 Series
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/44.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",National GEO
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/45.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Nuevo Tiempo
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/46.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",Pasiones
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/47.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",RCC
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/48.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Sony Channel
+#EXTINF:-1 group-title="PELÍCULAS",Space
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/50.m3u8
+#EXTINF:-1 group-title="PELÍCULAS",Studio Universal
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/53.m3u8
+#EXTINF:-1 group-title="PELÍCULAS",Sony Channel
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/49.m3u8
 
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",Space
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/50.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",Clack Max
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/51.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Star
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/52.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",Studio Universal
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/53.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",Telemundo Internacional
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/54.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",TN
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/55.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",TNT
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/56.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",TNT Novelas
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/57.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Canal Demo 1
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/58.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",TV5Monde
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/59.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",TyC Sports
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/60.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Universal Cinema
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/61.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",Universal Comedy
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/62.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",Universal Crime
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/63.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Universal Premiere
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/64.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",Universal Reality
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/65.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",Venus Media
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/66.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Tropicalia
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/67.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",WB TV
+########## 📺 SERIES ##########
+#EXTINF:-1 group-title="SERIES",AMC Series
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/42.m3u8
+#EXTINF:-1 group-title="SERIES",A3 Series
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/44.m3u8
+#EXTINF:-1 group-title="SERIES",Warner TV
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/68.m3u8
 
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",Tooncast
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/69.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Cartoonito
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/70.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",NPY
+########## 📰 NOTICIAS ##########
+#EXTINF:-1 group-title="NOTICIAS",TN
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/55.m3u8
+#EXTINF:-1 group-title="NOTICIAS",NPY
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/71.m3u8
 
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",Univision
+########## 🎵 MÚSICA ##########
+#EXTINF:-1 group-title="MÚSICA",HTV
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/40.m3u8
+
+########## 🌎 INTERNACIONAL ##########
+#EXTINF:-1 group-title="INTERNACIONAL",Telemundo Internacional
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/54.m3u8
+#EXTINF:-1 group-title="INTERNACIONAL",Univision
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/72.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Telefuturo
+#EXTINF:-1 group-title="INTERNACIONAL",TV5 Monde
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/59.m3u8
+
+########## 🇵🇾 PARAGUAY ##########
+#EXTINF:-1 group-title="PARAGUAY",Telefuturo
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/73.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",TLNovelas
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/74.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",Publicidad
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/75.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Canal Demo 1
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/76.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",Bandeirante
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/77.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",Sbt
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/78.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Record
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/79.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",Globo
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/80.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",Telefe
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/81.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Trece RPC
+#EXTINF:-1 group-title="PARAGUAY",Trece RPC
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/82.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",America
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/83.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",Canal 3
+#EXTINF:-1 group-title="PARAGUAY",Canal 3
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/84.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Canal Demo 1
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/85.m3u8
 
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",TNT Sport Premium
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/86.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",Canal 3
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/87.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Disney Plan Premium
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/88.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",ESPN
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/89.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",ESPN3
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/90.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",ESPN4
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/91.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",Canal 4
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/92.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",Canal 3
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/93.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Canal Demo 1
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/94.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",FreeTV Drama
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/95.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",FreeTV Estelar
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/96.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Canal Demo 1
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/97.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",Canal 4
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/98.m3u8
-
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",Canal 3
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/99.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Canal Demo 1" group-title="DEMO",Tastemade
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/100.m3u8
-
-#EXTINF:-1 tvg-id="canal2" tvg-name="Canal Demo 2" group-title="DEMO",Tigo Sport
-https://live.enhdtv.com:8081/8160/index.m3u8
+########## 👶 INFANTIL ##########
+#EXTINF:-1 group-title="INFANTIL",Tooncast
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/69.m3u8
+#EXTINF:-1 group-title="INFANTIL",Cartoonito
+http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/70.m3u8
