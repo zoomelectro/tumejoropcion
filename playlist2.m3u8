@@ -18,26 +18,26 @@ http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/14.m3u8
 
 #EXTINF:-1,Canal 7
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/15.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Noticias" group-title="DEMO",C
+#EXTINF:-1,Canal 8
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/16.m3u8
 
-#EXTINF:-1 tvg-id="canal2" tvg-name="Noticias" group-title="DEMO",CNN
+#EXTINF:-1,Canal 9
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/17.m3u8
 
-#EXTINF:-1 tvg-id="musica1" tvg-name="Noticias" group-title="demo",DHE
+#EXTINF:-1,Canal 10
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/18.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Cultura" group-title="DEMO",Discovery
+#EXTINF:-1,Canal 11
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/19.m3u8
 
-#EXTINF:-1 tvg-id="canal2" tvg-name="Cultura" group-title="DEMO",Theater Discovery
+#EXTINF:-1,Canal 12
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/20.m3u8
 
-#EXTINF:-1 tvg-id="musica1" tvg-name="Musica 24/7" group-title="demo",E
+#EXTINF:-1,Canal 13
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/21.m3u8
-#EXTINF:-1 tvg-id="canal1" tvg-name="Paraguay" group-title="DEMO",eltrece
+#EXTINF:-1,Canal 14
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/22.m3u8
 
-#EXTINF:-1 tvg-id="canal2" tvg-name="Noticias" group-title="DEMO",Enlace
+#EXTINF:-1,Canal 15
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/23.m3u8
 
 #EXTINF:-1 tvg-id="musica1" tvg-name="Deportes" group-title="demo",ESPN6
