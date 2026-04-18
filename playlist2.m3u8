@@ -1,41 +1,48 @@
 #EXTM3U
 
-#EXTINF:-1, A&E
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/5.m3u8
-
+#EXTINF:-1, America Tv
+https://prepublish.f.qaotic.net/a07/americahls-100056/playlist_720p.m3u8
 #EXTINF:-1, A24 Paraguay
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/6.m3u8
 
-#EXTINF:-1, ABC TV
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/7.m3u8
-
-#EXTINF:-1, Dibujo Animado
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/8.m3u8
-
-#EXTINF:-1, AXN
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/10.m3u8
-
+#EXTINF:-1, Antena Sur
+https://cloudpro.servidoresdestream.com:8081/8010/index.m3u8
+#EXTINF:-1, Argentinisima
+https://stream1.sersat.com/hls/argentinisima.m3u8
+#EXTINF:-1, ATV Sur
+https://alba-pe-atv-atvsur.stream.mediatiquestream.com/index.m3u8
 #EXTINF:-1, Baby TV
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/11.m3u8
-
+https://jmp2.uk/plu-5f4fb4cf605ddf000748e16f.m3u8
 #EXTINF:-1, 26
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/12.m3u8
 
-#EXTINF:-1, 5Dias Noticias
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/13.m3u8
-#EXTINF:-1, Cine Familiar
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/14.m3u8
-#EXTINF:-1, Discovery
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/20.m3u8
-#EXTINF:-1, Discovery Teather
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/21.m3u8
-#EXTINF:-1, E
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/22.m3u8
-#EXTINF:-1, Enlace
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/24.m3u8
-#EXTINF:-1, ESPN6
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/25.m3u8
-#EXTINF:-1, ESPN7
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/26.m3u8
-#EXTINF:-1, EWTN
-http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/27.m3u8
+#EXTINF:-1, Disney Junior
+http://tr.live.clarovtrcdn.vtrplay.com/disneyjrhdchi/vxfmt=dp/playlist.m3u8?device_profile=STB_HLS_VCAS_LIVE_HD
+#EXTINF:-1, Canal de las Estrellas
+https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8
+#EXTINF:-1, La Tele
+https://copacotf.desdeparaguay.net/latele/latele_py_alta/playlist.m3u8?admin=tvaccion
+#EXTINF:-1, Latin Zone TV
+https://cdn.streamingcpanel.com:3784/live/latinzonetvlive.m3u8
+#EXTINF:-1, NPY
+https://copacogen.desdeparaguay.net/npy/npy_py_alta/playlist.m3u8?admin=tvaccion
+#EXTINF:-1, PAKAPAKA
+http://201.217.246.42:44310/Live/3fcb6e26785fd8d415571b26dc3cf5d3/local-36_400.m3u8
+#EXTINF:-1, Paraguay TV
+https://stream.paraguaytv.gov.py/memfs/bbe36fed-9b49-4d1d-adaa-4bd6d1b2e386.m3u8
+#EXTINF:-1, Pasiones
+https://dvrfl04.tulix.tv/teleup-pasiones/mpegts
+#EXTINF:-1, Record News
+https://rnw-rn.otteravision.com/rnw/rn/rnw_rn.m3u8
+#EXTINF:-1, REDE TV
+https://streaming.cloudecast.com/hls/redetves/index.m3u8
+#EXTINF:-1, SBT
+https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8
+#EXTINF:-1, SNT
+https://d2qsan2ut81n2k.cloudfront.net/live/2e1f1b6a-9d03-4194-8559-2eabe61a1555/ts:abr.m3u8
+#EXTINF:-1, Sport TV
+https://stm.sinalmycn.com/21000/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0
+#EXTINF:-1, Sport TV 2
+https://stm.sinalmycn.com/21003/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0
+#EXTINF:-1, Sport TV 3
+https://stm.sinalmycn.com/21006/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0
