@@ -211,3 +211,5 @@ https://stm.sinalmycn.com/20003/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZy
 https://d03ae6b5c6724c24867e97a3dc04934a.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-1026-WORBBRPTFAST-WHALETVPLUS/1026/hls/master/playlist.m3u8
 #EXTINF:-1, Torneo Paraguay 1
 https://lumixtv.es/canales/PHPS/stream/lokendo.m3u8?user=Patronato
+#EXTINF:-1, Torneo Paraguay 2
+https://digital-tv.net/canales/PHPS/stream/vitaci9067.m3u8?user=Patronato
