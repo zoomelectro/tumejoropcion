@@ -46,3 +46,116 @@ https://stm.sinalmycn.com/21000/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZy
 https://stm.sinalmycn.com/21003/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0
 #EXTINF:-1, Sport TV 3
 https://stm.sinalmycn.com/21006/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0
+
+
+
+#EXTINF:-1, TV Brasil
+https://cdn.live.br1.jmvstream.com/webtv/AVJ-12952/playlist/playlist.m3u8
+#EXTINF:-1, Sula TV
+https://tv.webmedialive.com/sulatv/live/playlist.m3u8
+#EXTINF:-1, Super Musica
+https://backupmaxmedia.hvmultiplay.com/hls/stream4/supermusica.m3u8
+#EXTINF:-1, Sur TV
+https://redirector.rudo.video/hls-video/ey6283je82983je9823je8jowowiekldk9838274/surtv/surtv.smil/playlist.m3u8
+#EXTINF:-1, Telefuturo
+https://copacogen.desdeparaguay.net/telefuturo/telefuturo_py_alta/media.m3u8?admin=tvaccion
+#EXTINF:-1, Tigo0 Sport HD
+https://live.enhdtv.com:8081/8160/index.m3u8
+#EXTINF:-1, Times Brasil
+https://cr7v.short.gy/ManoTV/TimesBrasil/Whats75991634025/CNBC/Index.m3u8
+#EXTINF:-1, SBT Parana
+https://video09.logicahost.com.br/tvparaense/tvparaense/playlist.m3u
+#EXTINF:-1, TV Parana Turismo
+http://200.189.113.201/hls/tve.m3u8
+#EXTINF:-1, Venus Media
+https://rds3gen.desdeparaguay.net/venusmedia/venusmedia/.m3u8
+#EXTINF:-1, VM Latino
+https://59ef525c24caa.streamlock.net/vmtv/vmlatino/playlist.m3u8
+#EXTINF:-1, Extrema Accion
+https://stmv6.voxtvhd.com.br/cineaccion/cineaccion/playlist.m3u8
+#EXTINF:-1, Extrema Accion
+https://stmv6.voxtvhd.com.br/cineaccion/cineaccion/playlist.m3u8
+#EXTINF:-1, Extrema Cartoons
+https://stmv6.voxtvhd.com.br/xtremacartoons/xtremacartoons/playlist.m3u8
+#EXTINF:-1, Extrema Cine Clasico
+https://stmv6.voxtvhd.com.br/cineclasico/cineclasico/playlist.m3u8
+#EXTINF:-1, Extrema Terror
+https://stmv6.voxtvhd.com.br/cineterror/cineterror/playlist.m3u8
+#EXTINF:-1, Extremo Channel
+https://ss2.tvrdomi.com:1936/xtremochannel/xtremochannel/playlist.m3u8
+#EXTINF:-1, 4DMas Noticias
+https://rds3.desdeparaguay.net/4dmasnoticiastv/4dmasnoticiastv/playlist.m3u8
+#EXTINF:-1, C9N
+https://d1y0t05eznkmpn.cloudfront.net/index.m3u8
+#EXTINF:-1, Telemax
+https://stream-gtlc.telecentro.net.ar/hls/telemaxhls/main.m3u8
+#EXTINF:-1, Amazon Sat
+https://amazonsat.brasilstream.com.br/hls/amazonsat/index.m3u8
+#EXTINF:-1, Novo Tempo
+https://stream.live.novotempo.com/tv/smil:tvnovotempo.smil/playlist.m3u8
+#EXTINF:-1, Rede SPTV
+https://video01.logicahost.com.br/websptv/websptv/playlist.m3u8
+#EXTINF:-1, Toro TV
+https://streaming-1.eltorotv.com/lb0/eltorotv-streaming-web/index.m3u8
+#EXTINF:-1, Bolivision
+https://alba-bo-bolivision-bolivision.stream.mediatiquestream.com/index.m3u8
+#EXTINF:-1, 13 Cultura
+https://origin.dpsgo.com/ssai/event/GI-9cp_bT8KcerLpZwkuhw/master.m3u8
+#EXTINF:-1, DIRECTV Sport
+https://latam-cache-sv2-cdn.latamlive.net/DS1_ENC_LIVE/index.mpd
+#EXTINF:-1, DAZN Combate
+https://dazn-combat-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-dazn-combat-rakuten/CDN/master.m3u8
+#EXTINF:-1, F1 Channel
+https://jmp2.uk/plu-65c69ee3d77d450008c80438.m3u8
+#EXTINF:-1, Win Sports
+http://190.60.40.34:8001/play/a0ef
+#EXTINF:-1, AXN
+http://190.60.40.34:8001/play/a0eb
+#EXTINF:-1, Channel
+http://190.60.40.34:8001/play/a0eb
+#EXTINF:-1, FX
+http://190.60.40.34:8001/play/a0ed
+#EXTINF:-1, Telepacifico
+http://190.60.40.34:8001/play/a0eg
+#EXTINF:-1, Telefe
+http://190.60.40.34:8001/play/a0ei
+#EXTINF:-1, Claro Cinema
+http://190.60.40.34:8001/play/a0ek
+#EXTINF:-1, Nick Jr.
+http://190.60.40.34:8001/play/a0el
+#EXTINF:-1, Discovery Turbo
+http://190.60.40.34:8001/play/a0em
+#EXTINF:-1, ESNE
+http://190.60.40.34:8001/play/a0en
+#EXTINF:-1, ESPN3
+http://190.60.40.34:8001/play/a0eo
+#EXTINF:-1, ESPN
+http://190.60.40.34:8001/play/a0et
+#EXTINF:-1, NPY
+//190.60.40.34:8001/play/a0e1
+#EXTINF:-1, SUR TV
+http://190.60.40.34:8001/play/a0e2
+#EXTINF:-1, ZOOM TV
+http://190.60.40.34:8001/play/a0e3
+#EXTINF:-1, Canal TRO
+http://190.60.40.34:8001/play/a0e4
+#EXTINF:-1, City TV
+http://190.60.40.34:8001/play/a0e6
+#EXTINF:-1, HBO
+http://190.60.40.34:8001/play/a0e8
+#EXTINF:-1, Cinemax
+http://190.60.40.34:8001/play/a0e9
+#EXTINF:-1, Canal MP
+http://190.60.40.34:8001/play/a0a0
+#EXTINF:-1, Cine Latino
+http://190.60.40.34:8001/play/a0a1
+#EXTINF:-1, Studio Universal
+http://190.60.40.34:8001/play/a0a3
+#EXTINF:-1, Cinecanal
+http://190.60.40.34:8001/play/a0a4
+#EXTINF:-1, TVe
+http://190.60.40.34:8001/play/a0a6
+#EXTINF:-1, AXN
+http://190.60.40.34:8001/play/a0a8
+#EXTINF:-1, Space
+http://190.60.40.34:8001/play/a0a9
