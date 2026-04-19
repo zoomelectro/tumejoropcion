@@ -1,8 +1,10 @@
 #EXTM3U
+
 #EXTINF:-1, America Tv
 https://prepublish.f.qaotic.net/a07/americahls-100056/playlist_720p.m3u8
 #EXTINF:-1, A24 Paraguay
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/6.m3u8
+
 #EXTINF:-1, Antena Sur
 https://cloudpro.servidoresdestream.com:8081/8010/index.m3u8
 #EXTINF:-1, Argentinisima
@@ -13,6 +15,7 @@ https://alba-pe-atv-atvsur.stream.mediatiquestream.com/index.m3u8
 https://jmp2.uk/plu-5f4fb4cf605ddf000748e16f.m3u8
 #EXTINF:-1, 26
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/12.m3u8
+
 #EXTINF:-1, Disney Junior
 http://tr.live.clarovtrcdn.vtrplay.com/disneyjrhdchi/vxfmt=dp/playlist.m3u8?device_profile=STB_HLS_VCAS_LIVE_HD
 #EXTINF:-1, Canal de las Estrellas
@@ -43,6 +46,9 @@ https://stm.sinalmycn.com/21000/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZy
 https://stm.sinalmycn.com/21003/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0
 #EXTINF:-1, Sport TV 3
 https://stm.sinalmycn.com/21006/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0
+
+
+
 #EXTINF:-1, TV Brasil
 https://cdn.live.br1.jmvstream.com/webtv/AVJ-12952/playlist/playlist.m3u8
 #EXTINF:-1, Sula TV
@@ -197,3 +203,11 @@ http://190.60.40.34:8001/play/a0f2
 http://190.60.40.34:8001/play/a0f4
 #EXTINF:-1, Telesur
 http://190.60.40.34:8001/play/a0f5
+#EXTINF:-1, Premier FC1
+https://stm.sinalmycn.com/20000/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0
+#EXTINF:-1, Premier FC2
+https://stm.sinalmycn.com/20003/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0
+#EXTINF:-1, Red Bull TV Brasil
+https://d03ae6b5c6724c24867e97a3dc04934a.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-1026-WORBBRPTFAST-WHALETVPLUS/1026/hls/master/playlist.m3u8
+#EXTINF:-1, Torneo Paraguay 1
+rtmp://ingest.angelthump.com:1935/live/b846972b35f901a5ed70c2adbbb27952300e8a3c5094a086339eede1e2ef75ea
