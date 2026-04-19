@@ -1,10 +1,8 @@
 #EXTM3U
-
 #EXTINF:-1, America Tv
 https://prepublish.f.qaotic.net/a07/americahls-100056/playlist_720p.m3u8
 #EXTINF:-1, A24 Paraguay
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/6.m3u8
-
 #EXTINF:-1, Antena Sur
 https://cloudpro.servidoresdestream.com:8081/8010/index.m3u8
 #EXTINF:-1, Argentinisima
@@ -15,7 +13,6 @@ https://alba-pe-atv-atvsur.stream.mediatiquestream.com/index.m3u8
 https://jmp2.uk/plu-5f4fb4cf605ddf000748e16f.m3u8
 #EXTINF:-1, 26
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/12.m3u8
-
 #EXTINF:-1, Disney Junior
 http://tr.live.clarovtrcdn.vtrplay.com/disneyjrhdchi/vxfmt=dp/playlist.m3u8?device_profile=STB_HLS_VCAS_LIVE_HD
 #EXTINF:-1, Canal de las Estrellas
@@ -46,9 +43,6 @@ https://stm.sinalmycn.com/21000/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZy
 https://stm.sinalmycn.com/21003/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0
 #EXTINF:-1, Sport TV 3
 https://stm.sinalmycn.com/21006/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0
-
-
-
 #EXTINF:-1, TV Brasil
 https://cdn.live.br1.jmvstream.com/webtv/AVJ-12952/playlist/playlist.m3u8
 #EXTINF:-1, Sula TV
@@ -159,3 +153,47 @@ http://190.60.40.34:8001/play/a0a6
 http://190.60.40.34:8001/play/a0a8
 #EXTINF:-1, Space
 http://190.60.40.34:8001/play/a0a9
+#EXTINF:-1, Space
+http://190.60.40.34:8001/play/a0c3
+#EXTINF:-1, CHV Noticias
+http://190.60.40.34:8001/play/a0c3
+#EXTINF:-1, TRECE Chile
+http://190.60.40.34:8001/play/a0c4
+#EXTINF:-1, TNT Sport Premium
+http://190.60.40.34:8001/play/a0c5
+#EXTINF:-1, ESPN Premium
+http://190.60.40.34:8001/play/a0c6
+#EXTINF:-1, HBO2
+http://190.60.40.34:8001/play/a0c7
+#EXTINF:-1, HBO+
+http://190.60.40.34:8001/play/a0c8
+#EXTINF:-1, HBO Xtreme
+http://190.60.40.34:8001/play/a0c9
+#EXTINF:-1, La Red
+http://190.60.40.34:8001/play/a0c0
+#EXTINF:-1, Las Estrella
+http://190.60.40.34:8001/play/a0d1
+#EXTINF:-1, ESPN7
+http://190.60.40.34:8001/play/a0d2
+#EXTINF:-1, ESPN6
+http://190.60.40.34:8001/play/a0d3
+#EXTINF:-1, Telemundo
+http://190.60.40.34:8001/play/a0d4
+#EXTINF:-1, Novelas
+http://190.60.40.34:8001/play/a0d5
+#EXTINF:-1, Discovery ID
+http://190.60.40.34:8001/play/a0d6
+#EXTINF:-1, France 24
+http://190.60.40.34:8001/play/a0d7
+#EXTINF:-1, Claro Canal
+http://190.60.40.34:8001/play/a0d8
+#EXTINF:-1, TNT Novelas
+http://190.60.40.34:8001/play/a0d9
+#EXTINF:-1, Nuestra Tele
+http://190.60.40.34:8001/play/a0f0
+#EXTINF:-1, Cartoonito
+http://190.60.40.34:8001/play/a0f2
+#EXTINF:-1, ENLACE
+http://190.60.40.34:8001/play/a0f4
+#EXTINF:-1, Telesur
+http://190.60.40.34:8001/play/a0f5
