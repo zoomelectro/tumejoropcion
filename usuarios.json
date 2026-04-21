@@ -1,0 +1,12 @@
+[
+  {"nombre":"Carlos Mendez","mac":"A1:B2:C3:D4:E5:F6","plataforma":"tizen","vencimiento":"2026-04-25","online":true,"plan":"mensual","telefono":"0981-111-222"},
+  {"nombre":"María López","mac":"11:22:33:44:55:66","plataforma":"webos","vencimiento":"2026-04-24","online":true,"plan":"mensual","telefono":"0991-333-444"},
+  {"nombre":"Pedro Rojas","mac":"AA:BB:CC:DD:EE:FF","plataforma":"tizen","vencimiento":"2026-06-10","online":false,"plan":"trimestral","telefono":"0971-555-666"},
+  {"nombre":"Ana Torres","mac":"F1:E2:D3:C4:B5:A6","plataforma":"webos","vencimiento":"2026-04-27","online":true,"plan":"mensual","telefono":"0961-777-888"},
+  {"nombre":"Luis Sánchez","mac":"0A:1B:2C:3D:4E:5F","plataforma":"tizen","vencimiento":"2026-04-10","online":false,"plan":"mensual","telefono":"0981-999-000"},
+  {"nombre":"Rosa Martínez","mac":"6A:7B:8C:9D:AE:BF","plataforma":"webos","vencimiento":"2026-07-30","online":true,"plan":"semestral","telefono":"0991-123-456"},
+  {"nombre":"Jorge García","mac":"C0:D1:E2:F3:04:15","plataforma":"tizen","vencimiento":"2026-04-15","online":false,"plan":"mensual","telefono":"0971-654-321"},
+  {"nombre":"Elena Díaz","mac":"26:37:48:59:6A:7B","plataforma":"webos","vencimiento":"2026-05-20","online":true,"plan":"mensual","telefono":"0961-789-012"},
+  {"nombre":"Roberto Vera","mac":"B3:C4:D5:E6:F7:08","plataforma":"tizen","vencimiento":"2026-04-08","online":false,"plan":"mensual","telefono":"0981-345-678"},
+  {"nombre":"Carmen Núñez","mac":"19:2A:3B:4C:5D:6E","plataforma":"webos","vencimiento":"2026-08-15","online":true,"plan":"semestral","telefono":"0991-901-234"}
+]
