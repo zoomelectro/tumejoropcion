@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel IPTV — Control de Usuarios</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0c10;
+    --surface: #111318;
+    --surface2: #181c24;
+    --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.13);
+    --text: #e8eaf0;
+    --muted: #6b7280;
+    --accent: #6ee7b7;
+    --accent2: #3b82f6;
+    --warn: #fbbf24;
+    --danger: #f87171;
+    --ok: #6ee7b7;
+    --tizen: #38bdf8;
+    --webos: #a78bfa;
+    --mono: 'DM Mono', monospace;
+    --sans: 'Syne', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    min-height: 100vh;
+    font-size: 14px;
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo-icon {
+    width: 36px; height: 36px;
+    background: var(--accent);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+
+  .logo h1 { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }
+  .logo span { color: var(--muted); font-size: 13px; font-weight: 400; margin-top: 1px; display: block; }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .url-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border2);
+    border-radius: 8px;
+    padding: 6px 10px;
+  }
+
+  .url-bar label { color: var(--muted); font-size: 11px; white-space: nowrap; }
+  .url-bar input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 11px;
+    width: 280px;
+  }
+
+  .btn {
+    padding: 7px 16px;
+    border-radius: 7px;
+    border: 1px solid var(--border2);
+    background: var(--surface2);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.15s;
+  }
+  .btn:hover { background: var(--border2); border-color: rgba(255,255,255,0.2); }
+  .btn-accent {
+    background: var(--accent);
+    color: #0a0c10;
+    border-color: var(--accent);
+  }
+  .btn-accent:hover { background: #4ade80; }
+
+  /* Main */
+  main { padding: 28px 32px; max-width: 1400px; margin: 0 auto; }
+
+  /* Stats grid */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stat::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    border-radius: 2px 2px 0 0;
+  }
+
+  .stat.total::before  { background: var(--muted); }
+  .stat.online::before { background: var(--ok); }
+  .stat.warn::before   { background: var(--warn); }
+  .stat.danger::before { background: var(--danger); }
+
+  .stat-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  .stat-num {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  .stat.total  .stat-num { color: var(--text); }
+  .stat.online .stat-num { color: var(--ok); }
+  .stat.warn   .stat-num { color: var(--warn); }
+  .stat.danger .stat-num { color: var(--danger); }
+
+  /* Toolbar */
+  .toolbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .pill {
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border2);
+    background: transparent;
+    color: var(--muted);
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    letter-spacing: 0.02em;
+  }
+  .pill:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+  .pill.active {
+    background: rgba(110,231,183,0.12);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .search-box {
+    margin-left: auto;
+    background: var(--surface);
+    border: 1px solid var(--border2);
+    border-radius: 8px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .search-box input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 13px;
+    width: 180px;
+  }
+  .search-box input::placeholder { color: var(--muted); }
+
+  /* Table */
+  .table-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  table { width: 100%; border-collapse: collapse; }
+
+  thead tr {
+    border-bottom: 1px solid var(--border);
+  }
+
+  th {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.1s;
+    cursor: default;
+  }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: rgba(255,255,255,0.03); }
+
+  td {
+    padding: 13px 16px;
+    vertical-align: middle;
+  }
+
+  .user-name { font-weight: 600; font-size: 14px; }
+  .user-phone { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+  .mac-addr {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+  }
+
+  .plat-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 5px;
+    letter-spacing: 0.04em;
+  }
+  .plat-tizen { background: rgba(56,189,248,0.12); color: var(--tizen); }
+  .plat-webos { background: rgba(167,139,250,0.12); color: var(--webos); }
+
+  .venc-date { font-size: 13px; }
+  .venc-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+  .days-badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 5px;
+  }
+  .days-ok     { background: rgba(110,231,183,0.12); color: var(--ok); }
+  .days-warn   { background: rgba(251,191,36,0.12);  color: var(--warn); }
+  .days-danger { background: rgba(248,113,113,0.12); color: var(--danger); }
+
+  .status-dot {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .dot-on  { background: var(--ok); box-shadow: 0 0 6px var(--ok); animation: pulse 2s infinite; }
+  .dot-off { background: var(--muted); }
+
+  @keyframes pulse {
+    0%,100% { opacity:1; }
+    50% { opacity:0.5; }
+  }
+
+  .plan-tag {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--muted);
+    border: 1px solid var(--border2);
+    padding: 2px 7px;
+    border-radius: 4px;
+  }
+
+  .btn-renew {
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border2);
+    background: transparent;
+    color: var(--muted);
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn-renew:hover { color: var(--accent); border-color: var(--accent); background: rgba(110,231,183,0.08); }
+
+  /* Empty state */
+  .empty {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--muted);
+  }
+  .empty p { font-size: 15px; margin-top: 8px; }
+
+  /* Status bar */
+  .statusbar {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .statusbar .dot-live { width: 6px; height: 6px; border-radius: 50%; background: var(--ok); display: inline-block; animation: pulse 2s infinite; margin-right: 4px; }
+
+  /* Modal */
+  .modal-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--surface);
+    border: 1px solid var(--border2);
+    border-radius: 14px;
+    padding: 28px;
+    width: 380px;
+    max-width: 95vw;
+  }
+  .modal h2 { font-size: 17px; font-weight: 700; margin-bottom: 20px; }
+  .field { margin-bottom: 14px; }
+  .field label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; display: block; margin-bottom: 6px; }
+  .field input, .field select {
+    width: 100%;
+    background: var(--surface2);
+    border: 1px solid var(--border2);
+    border-radius: 7px;
+    padding: 9px 12px;
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 13px;
+    outline: none;
+  }
+  .field input:focus, .field select:focus { border-color: var(--accent); }
+  .modal-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 20px; }
+
+  /* Notification */
+  .notif {
+    position: fixed;
+    bottom: 24px; right: 24px;
+    background: var(--surface);
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 600;
+    z-index: 300;
+    transform: translateY(80px);
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  .notif.show { transform: translateY(0); opacity: 1; }
+
+  /* Add user btn */
+  .add-btn {
+    padding: 7px 16px;
+    border-radius: 7px;
+    background: var(--accent);
+    color: #0a0c10;
+    border: none;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .add-btn:hover { background: #4ade80; }
+
+  @media (max-width: 768px) {
+    header { padding: 14px 16px; flex-wrap: wrap; gap: 12px; }
+    .url-bar input { width: 140px; }
+    main { padding: 16px; }
+    th:nth-child(2), td:nth-child(2),
+    th:nth-child(4), td:nth-child(4) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo">
+    <div class="logo-icon">📺</div>
+    <div>
+      <h1>Panel IPTV</h1>
+      <span>Control de usuarios Tizen / WebOS</span>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="url-bar">
+      <label>GitHub JSON</label>
+      <input type="text" id="github-url" placeholder="https://raw.githubusercontent.com/..." />
+    </div>
+    <button class="btn btn-accent" onclick="cargarURL()">Cargar</button>
+    <button class="add-btn" onclick="abrirModal()">+ Usuario</button>
+  </div>
+</header>
+
+<!-- Main -->
+<main>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat total">
+      <div class="stat-label">Total usuarios</div>
+      <div class="stat-num" id="s-total">—</div>
+    </div>
+    <div class="stat online">
+      <div class="stat-label">Conectados ahora</div>
+      <div class="stat-num" id="s-online">—</div>
+    </div>
+    <div class="stat warn">
+      <div class="stat-label">Vencen en 7 días</div>
+      <div class="stat-num" id="s-warn">—</div>
+    </div>
+    <div class="stat danger">
+      <div class="stat-label">Vencidos</div>
+      <div class="stat-num" id="s-danger">—</div>
+    </div>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <button class="pill active" onclick="setFiltro('todos',this)">Todos</button>
+    <button class="pill" onclick="setFiltro('online',this)">● Online</button>
+    <button class="pill" onclick="setFiltro('vence7',this)">Vencen pronto</button>
+    <button class="pill" onclick="setFiltro('vencidos',this)">Vencidos</button>
+    <button class="pill" onclick="setFiltro('tizen',this)">Tizen</button>
+    <button class="pill" onclick="setFiltro('webos',this)">WebOS</button>
+    <div class="search-box">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:#6b7280"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="buscar" placeholder="Buscar nombre o MAC..." oninput="renderTabla()" />
+    </div>
+  </div>
+
+  <!-- Table -->
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Usuario</th>
+          <th>MAC</th>
+          <th>Plataforma</th>
+          <th>Vencimiento</th>
+          <th>Días restantes</th>
+          <th>Estado</th>
+          <th>Plan</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <!-- Status bar -->
+  <div class="statusbar">
+    <span><span class="dot-live"></span> Datos locales activos</span>
+    <span id="last-update">—</span>
+    <span style="margin-left:auto;font-size:11px;">
+      Para conectar a GitHub: pega la URL raw del JSON y hacé clic en Cargar
+    </span>
+  </div>
+
+</main>
+
+<!-- Modal agregar usuario -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <h2>Agregar usuario</h2>
+    <div class="field">
+      <label>Nombre completo</label>
+      <input type="text" id="m-nombre" placeholder="Juan Pérez" />
+    </div>
+    <div class="field">
+      <label>Dirección MAC</label>
+      <input type="text" id="m-mac" placeholder="AA:BB:CC:DD:EE:FF" />
+    </div>
+    <div class="field">
+      <label>Plataforma</label>
+      <select id="m-plat">
+        <option value="tizen">Tizen (Samsung)</option>
+        <option value="webos">WebOS (LG)</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Plan</label>
+      <select id="m-plan">
+        <option value="30">Mensual (30 días)</option>
+        <option value="90">Trimestral (90 días)</option>
+        <option value="180">Semestral (180 días)</option>
+        <option value="365">Anual (365 días)</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Teléfono (opcional)</label>
+      <input type="text" id="m-tel" placeholder="0981-000-000" />
+    </div>
+    <div class="modal-actions">
+      <button class="btn" onclick="cerrarModal()">Cancelar</button>
+      <button class="btn btn-accent" onclick="agregarUsuario()">Guardar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Notificación -->
+<div class="notif" id="notif"></div>
+
+<script>
+let usuarios = [];
+let filtro = 'todos';
+
+const DEMO = [
+  {"nombre":"Carlos Mendez","mac":"A1:B2:C3:D4:E5:F6","plataforma":"tizen","vencimiento":"2026-04-25","online":true,"plan":"mensual","telefono":"0981-111-222"},
+  {"nombre":"María López","mac":"11:22:33:44:55:66","plataforma":"webos","vencimiento":"2026-04-24","online":true,"plan":"mensual","telefono":"0991-333-444"},
+  {"nombre":"Pedro Rojas","mac":"AA:BB:CC:DD:EE:FF","plataforma":"tizen","vencimiento":"2026-06-10","online":false,"plan":"trimestral","telefono":"0971-555-666"},
+  {"nombre":"Ana Torres","mac":"F1:E2:D3:C4:B5:A6","plataforma":"webos","vencimiento":"2026-04-27","online":true,"plan":"mensual","telefono":"0961-777-888"},
+  {"nombre":"Luis Sánchez","mac":"0A:1B:2C:3D:4E:5F","plataforma":"tizen","vencimiento":"2026-04-10","online":false,"plan":"mensual","telefono":"0981-999-000"},
+  {"nombre":"Rosa Martínez","mac":"6A:7B:8C:9D:AE:BF","plataforma":"webos","vencimiento":"2026-07-30","online":true,"plan":"semestral","telefono":"0991-123-456"},
+  {"nombre":"Jorge García","mac":"C0:D1:E2:F3:04:15","plataforma":"tizen","vencimiento":"2026-04-15","online":false,"plan":"mensual","telefono":"0971-654-321"},
+  {"nombre":"Elena Díaz","mac":"26:37:48:59:6A:7B","plataforma":"webos","vencimiento":"2026-05-20","online":true,"plan":"mensual","telefono":"0961-789-012"},
+  {"nombre":"Roberto Vera","mac":"B3:C4:D5:E6:F7:08","plataforma":"tizen","vencimiento":"2026-04-08","online":false,"plan":"mensual","telefono":"0981-345-678"},
+  {"nombre":"Carmen Núñez","mac":"19:2A:3B:4C:5D:6E","plataforma":"webos","vencimiento":"2026-08-15","online":true,"plan":"semestral","telefono":"0991-901-234"}
+];
+
+function dias(fechaStr) {
+  const hoy = new Date(); hoy.setHours(0,0,0,0);
+  const v = new Date(fechaStr);
+  return Math.ceil((v - hoy) / 86400000);
+}
+
+function formatFecha(f) {
+  const [y,m,d] = f.split('-');
+  const meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  return `${d} ${meses[+m-1]} ${y}`;
+}
+
+function daysBadge(d) {
+  const cl = d < 0 ? 'days-danger' : d <= 7 ? 'days-warn' : 'days-ok';
+  const txt = d < 0 ? `${d}d` : `+${d}d`;
+  return `<span class="days-badge ${cl}">${txt}</span>`;
+}
+
+function renderTabla() {
+  const q = (document.getElementById('buscar').value || '').toLowerCase();
+  let lista = usuarios.filter(u => {
+    if (q && !u.nombre.toLowerCase().includes(q) && !u.mac.toLowerCase().includes(q)) return false;
+    if (filtro === 'online')   return u.online;
+    if (filtro === 'vence7')   { const d = dias(u.vencimiento); return d >= 0 && d <= 7; }
+    if (filtro === 'vencidos') return dias(u.vencimiento) < 0;
+    if (filtro === 'tizen')    return u.plataforma === 'tizen';
+    if (filtro === 'webos')    return u.plataforma === 'webos';
+    return true;
+  });
+  lista = lista.sort((a,b) => dias(a.vencimiento) - dias(b.vencimiento));
+
+  const tbody = document.getElementById('tbody');
+  if (!lista.length) {
+    tbody.innerHTML = `<tr><td colspan="8"><div class="empty"><div style="font-size:28px">🔍</div><p>Sin resultados</p></div></td></tr>`;
+    return;
+  }
+  tbody.innerHTML = lista.map(u => {
+    const d = dias(u.vencimiento);
+    const platClass = u.plataforma === 'tizen' ? 'plat-tizen' : 'plat-webos';
+    const platName  = u.plataforma === 'tizen' ? 'Tizen' : 'WebOS';
+    const onlineHtml = u.online
+      ? `<span class="status-dot"><span class="dot dot-on"></span> Online</span>`
+      : `<span class="status-dot" style="color:#6b7280"><span class="dot dot-off"></span> Offline</span>`;
+    return `<tr>
+      <td>
+        <div class="user-name">${u.nombre}</div>
+        <div class="user-phone">${u.telefono || '—'}</div>
+      </td>
+      <td><span class="mac-addr">${u.mac}</span></td>
+      <td><span class="plat-badge ${platClass}">${platName}</span></td>
+      <td>
+        <div class="venc-date">${formatFecha(u.vencimiento)}</div>
+      </td>
+      <td>${daysBadge(d)}</td>
+      <td>${onlineHtml}</td>
+      <td><span class="plan-tag">${u.plan || '—'}</span></td>
+      <td><button class="btn-renew" onclick="renovar('${u.mac}')">Renovar</button></td>
+    </tr>`;
+  }).join('');
+}
+
+function actualizarStats() {
+  const total   = usuarios.length;
+  const online  = usuarios.filter(u => u.online).length;
+  const warn7   = usuarios.filter(u => { const d = dias(u.vencimiento); return d >= 0 && d <= 7; }).length;
+  const venc    = usuarios.filter(u => dias(u.vencimiento) < 0).length;
+  document.getElementById('s-total').textContent  = total;
+  document.getElementById('s-online').textContent = online;
+  document.getElementById('s-warn').textContent   = warn7;
+  document.getElementById('s-danger').textContent = venc;
+  const now = new Date();
+  document.getElementById('last-update').textContent =
+    `Actualizado: ${now.toLocaleTimeString('es-PY')}`;
+}
+
+function setFiltro(f, btn) {
+  filtro = f;
+  document.querySelectorAll('.pill').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderTabla();
+}
+
+function notif(msg) {
+  const el = document.getElementById('notif');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2800);
+}
+
+function renovar(mac) {
+  const u = usuarios.find(x => x.mac === mac);
+  if (!u) return;
+  const dias_plan = { mensual:30, trimestral:90, semestral:180, anual:365 };
+  const hoy = new Date();
+  const actual = new Date(u.vencimiento);
+  const base = actual > hoy ? actual : hoy;
+  base.setDate(base.getDate() + (dias_plan[u.plan] || 30));
+  u.vencimiento = base.toISOString().split('T')[0];
+  actualizarStats();
+  renderTabla();
+  notif(`✓ ${u.nombre} renovado hasta ${formatFecha(u.vencimiento)}`);
+}
+
+function abrirModal() {
+  document.getElementById('modal').classList.add('open');
+}
+function cerrarModal() {
+  document.getElementById('modal').classList.remove('open');
+  ['m-nombre','m-mac','m-tel'].forEach(id => document.getElementById(id).value = '');
+}
+
+function agregarUsuario() {
+  const nombre = document.getElementById('m-nombre').value.trim();
+  const mac    = document.getElementById('m-mac').value.trim().toUpperCase();
+  const plat   = document.getElementById('m-plat').value;
+  const plan   = document.getElementById('m-plan');
+  const tel    = document.getElementById('m-tel').value.trim();
+  const diasP  = parseInt(plan.value);
+  const planNombre = plan.options[plan.selectedIndex].text.split(' ')[0].toLowerCase();
+
+  if (!nombre || !mac) { notif('⚠ Nombre y MAC son obligatorios'); return; }
+  if (usuarios.find(u => u.mac === mac)) { notif('⚠ Esa MAC ya existe'); return; }
+
+  const venc = new Date();
+  venc.setDate(venc.getDate() + diasP);
+
+  usuarios.push({
+    nombre, mac, plataforma: plat,
+    vencimiento: venc.toISOString().split('T')[0],
+    online: false,
+    plan: planNombre,
+    telefono: tel
+  });
+
+  cerrarModal();
+  actualizarStats();
+  renderTabla();
+  notif(`✓ ${nombre} agregado`);
+}
+
+async function cargarURL() {
+  const url = document.getElementById('github-url').value.trim();
+  if (!url) { notif('⚠ Ingresá la URL del JSON'); return; }
+  try {
+    const r = await fetch(url);
+    if (!r.ok) throw new Error('No se pudo acceder');
+    const data = await r.json();
+    usuarios = data;
+    actualizarStats();
+    renderTabla();
+    notif(`✓ ${data.length} usuarios cargados desde GitHub`);
+  } catch(e) {
+    notif('✗ Error al cargar: ' + e.message);
+  }
+}
+
+// Cerrar modal con Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') cerrarModal();
+});
+document.getElementById('modal').addEventListener('click', e => {
+  if (e.target === e.currentTarget) cerrarModal();
+});
+
+// Iniciar con datos de demo
+usuarios = DEMO;
+actualizarStats();
+renderTabla();
+</script>
+</body>
+</html>
