@@ -6,7 +6,8 @@ https://prepublish.f.qaotic.net/a07/americahls-100056/playlist_720p.m3u8
 http://130.51.23.173:8030/hls/canal14.m3u8
 #EXTINF:-1, A24 Paraguay
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/6.m3u8
-
+#EXTINF:-1, ABC Color
+https://live2.eu-north-1a.cf.dmcdn.net/sec2(BXT9y3BzaSPLmI3H49DjxYFJe9zYpqqevSMrXwap-oKN1ZqQLi0vILPAQZHyiztcaJm90M8f3SC3BrDTmwPoU3NPakK-AB4gZlwkkQdGQ60lGYl4y8eYenXG6ZQXKKCr)/cloud/3/x9skr3m/d/live-720.m3u8
 #EXTINF:-1, Antena Sur
 https://cloudpro.servidoresdestream.com:8081/8010/index.m3u8
 #EXTINF:-1, Argentinisima
