@@ -40,6 +40,8 @@ https://rnw-rn.otteravision.com/rnw/rn/rnw_rn.m3u8
 https://streaming.cloudecast.com/hls/redetves/index.m3u8
 #EXTINF:-1, SBT
 https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8
+#EXTINF:-1, SBT Latino
+http://130.51.23.173:8030/hls/canal21.m3u8
 #EXTINF:-1, SNT
 https://d2qsan2ut81n2k.cloudfront.net/live/2e1f1b6a-9d03-4194-8559-2eabe61a1555/ts:abr.m3u8
 #EXTINF:-1, Sport TV
@@ -53,6 +55,10 @@ https://stm.sinalmycn.com/21006/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZy
 
 #EXTINF:-1, TV Brasil
 https://cdn.live.br1.jmvstream.com/webtv/AVJ-12952/playlist/playlist.m3u8
+
+#EXTINF:-1, TV Gaceta
+http://130.51.23.173:8030/hls/canal28.m3u8
+
 #EXTINF:-1, Sula TV
 https://tv.webmedialive.com/sulatv/live/playlist.m3u8
 #EXTINF:-1, Super Musica
@@ -113,14 +119,20 @@ https://jmp2.uk/plu-65c69ee3d77d450008c80438.m3u8
 http://190.60.40.34:8001/play/a0ef
 #EXTINF:-1, AXN
 http://190.60.40.34:8001/play/a0eb
+#EXTINF:-1, Cable Noticias
+http://130.51.23.173:8030/hls/canal15.m3u8
 #EXTINF:-1, Channel
 http://190.60.40.34:8001/play/a0eb
 #EXTINF:-1, FX
 http://190.60.40.34:8001/play/a0ed
+#EXTINF:-1, Globo
+http://130.51.23.173:8030/hls/canal16.m3u8
+#EXTINF:-1, Record News
+http://130.51.23.173:8030/hls/canal17.m3u8
 #EXTINF:-1, Telepacifico
 http://190.60.40.34:8001/play/a0eg
 #EXTINF:-1, Telefe
-http://190.60.40.34:8001/play/a0ei
+http://130.51.23.173:8030/hls/canal13.m3u8
 #EXTINF:-1, Claro Cinema
 http://190.60.40.34:8001/play/a0ek
 #EXTINF:-1, Nick Jr.
@@ -166,7 +178,7 @@ http://190.60.40.34:8001/play/a0c3
 #EXTINF:-1, CHV Noticias
 http://190.60.40.34:8001/play/a0c3
 #EXTINF:-1, TRECE Chile
-http://190.60.40.34:8001/play/a0c4
+http://130.51.23.173:8030/hls/canal12.m3u8
 #EXTINF:-1, TNT Sport Premium
 http://190.60.40.34:8001/play/a0c5
 #EXTINF:-1, ESPN Premium
