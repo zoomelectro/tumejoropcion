@@ -128,6 +128,10 @@ http://190.60.40.34:8001/play/a0eb
 http://190.60.40.34:8001/play/a0ed
 #EXTINF:-1, Globo
 http://130.51.23.173:8030/hls/canal16.m3u8
+#EXTINF:-1, Globo
+http://130.51.23.173:8030/hls/canal16.m3u8
+https://cors-proxy.cooks.fyi/http://hls1.sua.tv/live/globotvbahiafhdbr2/s.m3u8
+
 #EXTINF:-1, Record News
 http://130.51.23.173:8030/hls/canal17.m3u8
 #EXTINF:-1, Telepacifico
