@@ -68,6 +68,10 @@ https://backupmaxmedia.hvmultiplay.com/hls/stream4/supermusica.m3u8
 https://redirector.rudo.video/hls-video/ey6283je82983je9823je8jowowiekldk9838274/surtv/surtv.smil/playlist.m3u8
 #EXTINF:-1, Telefuturo
 https://copacogen.desdeparaguay.net/telefuturo/telefuturo_py_alta/media.m3u8?admin=tvaccion
+#EXTINF:-1, Telemundo
+https://xumo-drct-ch836-57aiq.fast.nbcuni.com/live/master.m3u8
+
+
 #EXTINF:-1, Tigo0 Sport HD
 https://live.enhdtv.com:8081/8160/index.m3u8
 #EXTINF:-1, Times Brasil
@@ -225,6 +229,8 @@ http://190.60.40.34:8001/play/a0f2
 http://190.60.40.34:8001/play/a0f4
 #EXTINF:-1, Telesur
 http://190.60.40.34:8001/play/a0f5
+#EXTINF:-1, UFC
+https://aegis-cloudfront-1.tubi.video/a78ea283-8666-44a1-a0f6-fde5d229ac21/playlist.m3u8
 #EXTINF:-1, Premier FC1
 https://stm.sinalmycn.com/20000/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0
 #EXTINF:-1, Premier FC2
