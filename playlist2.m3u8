@@ -47,6 +47,8 @@ https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8
 http://130.51.23.173:8030/hls/canal21.m3u8
 #EXTINF:-1, SNT
 https://d2qsan2ut81n2k.cloudfront.net/live/2e1f1b6a-9d03-4194-8559-2eabe61a1555/ts:abr.m3u8
+#EXTINF:-1, SNT 2
+http://playtvch.lat:2082/live/595983342777py/030626py/1890.ts
 #EXTINF:-1, Sport TV
 https://stm.sinalmycn.com/21000/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0
 #EXTINF:-1, Sport TV 2
