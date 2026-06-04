@@ -72,7 +72,8 @@ https://redirector.rudo.video/hls-video/ey6283je82983je9823je8jowowiekldk9838274
 http://playtvch.lat:2082/live/595983342777py/030626py/2396.ts
 #EXTINF:-1, Telemundo
 https://xumo-drct-ch836-57aiq.fast.nbcuni.com/live/master.m3u8
-
+#EXTINF:-1, Unicanal
+http://playtvch.lat:2082/live/595983342777py/030626py/109.ts
 
 #EXTINF:-1, Tigo0 Sport HD
 https://live.enhdtv.com:8081/8160/index.m3u8
