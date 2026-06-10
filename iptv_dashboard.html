@@ -1,0 +1,515 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans);color:var(--color-text-primary)}
+.nav{display:flex;gap:4px;padding:0 0 1.5rem;border-bottom:0.5px solid var(--color-border-tertiary);margin-bottom:1.5rem;flex-wrap:wrap}
+.nav-btn{padding:7px 16px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);background:transparent;cursor:pointer;font-size:13px;color:var(--color-text-secondary);transition:all .15s;display:flex;align-items:center;gap:6px}
+.nav-btn:hover{background:var(--color-background-secondary)}
+.nav-btn.active{background:var(--color-background-primary);border-color:var(--color-border-primary);color:var(--color-text-primary);font-weight:500}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.5rem}
+.metric{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:14px 16px}
+.metric-label{font-size:12px;color:var(--color-text-secondary);margin-bottom:6px;display:flex;align-items:center;gap:5px}
+.metric-value{font-size:22px;font-weight:500}
+.metric-value.blue{color:#185FA5}.metric-value.green{color:#3B6D11}.metric-value.amber{color:#854F0B}.metric-value.purple{color:#3C3489}
+.section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:8px}
+.section-title{font-size:15px;font-weight:500}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.search{padding:7px 12px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);font-size:13px;background:var(--color-background-primary);color:var(--color-text-primary);width:200px}
+.search:focus{outline:none;border-color:var(--color-border-primary)}
+select{padding:7px 10px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);font-size:13px;background:var(--color-background-primary);color:var(--color-text-primary);cursor:pointer}
+.btn{padding:7px 14px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:transparent;cursor:pointer;font-size:13px;color:var(--color-text-primary);display:flex;align-items:center;gap:5px;transition:all .15s}
+.btn:hover{background:var(--color-background-secondary)}
+.btn.primary{background:#185FA5;color:#fff;border-color:#185FA5}
+.btn.primary:hover{background:#0C447C;border-color:#0C447C}
+.btn.danger{color:#A32D2D;border-color:#F09595}
+.btn.danger:hover{background:#FCEBEB}
+.btn.success{color:#3B6D11;border-color:#C0DD97}
+.btn.success:hover{background:#EAF3DE}
+.table-wrap{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{padding:10px 14px;text-align:left;font-weight:500;font-size:12px;color:var(--color-text-secondary);border-bottom:0.5px solid var(--color-border-tertiary);background:var(--color-background-secondary)}
+td{padding:10px 14px;border-bottom:0.5px solid var(--color-border-tertiary);color:var(--color-text-primary)}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--color-background-secondary)}
+.badge{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:500}
+.badge.active{background:#EAF3DE;color:#27500A}
+.badge.inactive{background:#F1EFE8;color:#5F5E5A}
+.badge.suspended{background:#FCEBEB;color:#791F1F}
+.badge.trial{background:#FAEEDA;color:#633806}
+.avatar{width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;flex-shrink:0}
+.av-blue{background:#E6F1FB;color:#0C447C}
+.av-purple{background:#EEEDFE;color:#3C3489}
+.av-teal{background:#E1F5EE;color:#085041}
+.av-coral{background:#FAECE7;color:#712B13}
+.user-cell{display:flex;align-items:center;gap:10px}
+.user-info .name{font-weight:500;font-size:13px}
+.user-info .sub{font-size:11px;color:var(--color-text-secondary)}
+.credits-cell{display:flex;align-items:center;gap:6px}
+.credits-num{font-weight:500}
+.credits-low{color:#A32D2D}
+.credits-ok{color:#185FA5}
+.page{display:none}.page.active{display:block}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:100}
+.modal{background:var(--color-background-primary);border-radius:var(--border-radius-lg);border:0.5px solid var(--color-border-tertiary);padding:1.5rem;width:400px;max-width:95vw}
+.modal-title{font-size:15px;font-weight:500;margin-bottom:1.25rem;display:flex;justify-content:space-between;align-items:center}
+.modal-close{background:none;border:none;cursor:pointer;color:var(--color-text-secondary);font-size:18px;padding:2px}
+.form-row{margin-bottom:14px}
+.form-label{font-size:12px;color:var(--color-text-secondary);margin-bottom:5px;display:block}
+.form-input{width:100%;padding:8px 10px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);font-size:13px;background:var(--color-background-primary);color:var(--color-text-primary)}
+.form-input:focus{outline:none;border-color:var(--color-border-primary)}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.modal-footer{display:flex;justify-content:flex-end;gap:8px;margin-top:1.25rem;padding-top:1rem;border-top:0.5px solid var(--color-border-tertiary)}
+.credit-adjust{display:flex;align-items:center;gap:8px}
+.credit-adjust input{width:80px;text-align:center}
+.reseller-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem;margin-bottom:10px}
+.reseller-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+.reseller-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.reseller-stat{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 12px}
+.reseller-stat-label{font-size:11px;color:var(--color-text-secondary);margin-bottom:3px}
+.reseller-stat-value{font-size:16px;font-weight:500}
+.reseller-actions{display:flex;gap:6px;flex-wrap:wrap}
+.tab{display:none}.tab.active{display:block}
+.credits-history{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden}
+.ch-item{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:0.5px solid var(--color-border-tertiary);font-size:13px}
+.ch-item:last-child{border-bottom:none}
+.ch-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.ch-icon.add{background:#EAF3DE;color:#27500A}
+.ch-icon.sub{background:#FCEBEB;color:#791F1F}
+.ch-icon.transfer{background:#E6F1FB;color:#0C447C}
+.ch-desc{flex:1}
+.ch-desc .ch-who{font-weight:500}
+.ch-desc .ch-detail{font-size:11px;color:var(--color-text-secondary)}
+.ch-amount{font-weight:500}
+.ch-amount.pos{color:#3B6D11}
+.ch-amount.neg{color:#A32D2D}
+.empty{text-align:center;padding:2.5rem;color:var(--color-text-secondary);font-size:13px}
+.action-row{display:flex;gap:6px}
+.top-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;gap:8px}
+.top-title{font-size:18px;font-weight:500}
+.top-subtitle{font-size:13px;color:var(--color-text-secondary);margin-top:2px}
+</style>
+
+<h2 class="sr-only">Panel de control IPTV — gestión de usuarios, revendedores y créditos</h2>
+
+<div class="top-bar">
+  <div>
+    <div class="top-title"><i class="ti ti-device-tv" aria-hidden="true" style="font-size:18px;vertical-align:-2px;margin-right:6px"></i>IPTV Manager</div>
+    <div class="top-subtitle">Panel de administración</div>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center">
+    <span style="font-size:12px;color:var(--color-text-secondary)">Admin</span>
+    <div class="avatar av-purple" style="width:32px;height:32px;font-size:12px">AD</div>
+  </div>
+</div>
+
+<div class="nav">
+  <button class="nav-btn active" onclick="showPage('dashboard')"><i class="ti ti-layout-dashboard" aria-hidden="true"></i>Resumen</button>
+  <button class="nav-btn" onclick="showPage('users')"><i class="ti ti-users" aria-hidden="true"></i>Usuarios</button>
+  <button class="nav-btn" onclick="showPage('resellers')"><i class="ti ti-building-store" aria-hidden="true"></i>Revendedores</button>
+  <button class="nav-btn" onclick="showPage('credits')"><i class="ti ti-coin" aria-hidden="true"></i>Créditos</button>
+</div>
+
+<div id="page-dashboard" class="page active">
+  <div class="metrics">
+    <div class="metric"><div class="metric-label"><i class="ti ti-users" aria-hidden="true"></i>Usuarios totales</div><div class="metric-value blue" id="m-total">0</div></div>
+    <div class="metric"><div class="metric-label"><i class="ti ti-circle-check" aria-hidden="true"></i>Activos</div><div class="metric-value green" id="m-active">0</div></div>
+    <div class="metric"><div class="metric-label"><i class="ti ti-building-store" aria-hidden="true"></i>Revendedores</div><div class="metric-value purple" id="m-resellers">0</div></div>
+    <div class="metric"><div class="metric-label"><i class="ti ti-coin" aria-hidden="true"></i>Créditos totales</div><div class="metric-value amber" id="m-credits">0</div></div>
+  </div>
+
+  <div class="section-header"><span class="section-title">Actividad reciente</span></div>
+  <div class="credits-history" id="dash-activity"></div>
+</div>
+
+<div id="page-users" class="page">
+  <div class="section-header">
+    <span class="section-title">Usuarios</span>
+    <div class="controls">
+      <input type="text" class="search" placeholder="Buscar usuario..." oninput="filterUsers(this.value)" id="user-search">
+      <select onchange="filterUserStatus(this.value)" id="user-status-filter">
+        <option value="">Todos los estados</option>
+        <option value="active">Activo</option>
+        <option value="inactive">Inactivo</option>
+        <option value="suspended">Suspendido</option>
+        <option value="trial">Prueba</option>
+      </select>
+      <button class="btn primary" onclick="openModal('add-user')"><i class="ti ti-plus" aria-hidden="true"></i>Nuevo usuario</button>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr>
+        <th>Usuario</th><th>Estado</th><th>Revendedor</th><th>Créditos</th><th>Conexiones</th><th>Expira</th><th>Acciones</th>
+      </tr></thead>
+      <tbody id="users-tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div id="page-resellers" class="page">
+  <div class="section-header">
+    <span class="section-title">Revendedores</span>
+    <div class="controls">
+      <button class="btn primary" onclick="openModal('add-reseller')"><i class="ti ti-plus" aria-hidden="true"></i>Nuevo revendedor</button>
+    </div>
+  </div>
+  <div id="resellers-list"></div>
+</div>
+
+<div id="page-credits" class="page">
+  <div class="section-header">
+    <span class="section-title">Gestión de créditos</span>
+    <div class="controls">
+      <button class="btn primary" onclick="openModal('add-credits')"><i class="ti ti-plus" aria-hidden="true"></i>Añadir créditos</button>
+      <button class="btn" onclick="openModal('transfer-credits')"><i class="ti ti-transfer" aria-hidden="true"></i>Transferir</button>
+    </div>
+  </div>
+  <div class="metrics" style="margin-bottom:1.5rem">
+    <div class="metric"><div class="metric-label">Total en sistema</div><div class="metric-value blue" id="cr-total">0</div></div>
+    <div class="metric"><div class="metric-label">Asignados</div><div class="metric-value green" id="cr-assigned">0</div></div>
+    <div class="metric"><div class="metric-label">Disponibles</div><div class="metric-value amber" id="cr-available">0</div></div>
+  </div>
+  <div class="section-header"><span class="section-title" style="font-size:14px">Historial de movimientos</span></div>
+  <div class="credits-history" id="credits-log"></div>
+</div>
+
+<div id="modals"></div>
+
+<script>
+const avatarColors = ['av-blue','av-purple','av-teal','av-coral'];
+function av(name){return avatarColors[name.charCodeAt(0)%4]}
+function initials(name){return name.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2)}
+
+let state = {
+  users:[
+    {id:1,name:'Carlos Méndez',user:'cmendez',email:'carlos@mail.com',status:'active',reseller:'TechIPTV',credits:12,maxConn:2,expiry:'2025-09-15'},
+    {id:2,name:'María López',user:'mlopez',email:'maria@mail.com',status:'trial',reseller:'TechIPTV',credits:3,maxConn:1,expiry:'2025-07-01'},
+    {id:3,name:'Juan Pérez',user:'jperez',email:'juan@mail.com',status:'active',reseller:'StreamPlus',credits:8,maxConn:2,expiry:'2025-12-31'},
+    {id:4,name:'Ana Torres',user:'atorres',email:'ana@mail.com',status:'suspended',reseller:'StreamPlus',credits:0,maxConn:1,expiry:'2025-06-20'},
+    {id:5,name:'Luis García',user:'lgarcia',email:'luis@mail.com',status:'inactive',reseller:'TechIPTV',credits:5,maxConn:2,expiry:'2025-08-10'},
+    {id:6,name:'Sofía Ruiz',user:'sruiz',email:'sofia@mail.com',status:'active',reseller:'MegaStream',credits:20,maxConn:3,expiry:'2026-01-15'},
+  ],
+  resellers:[
+    {id:1,name:'TechIPTV',contact:'Pedro Núñez',email:'pedro@techiptv.com',credits:150,users:3,status:'active'},
+    {id:2,name:'StreamPlus',contact:'Laura Vega',email:'laura@streamplus.com',credits:85,users:2,status:'active'},
+    {id:3,name:'MegaStream',contact:'Diego Salazar',email:'diego@megastream.com',credits:40,users:1,status:'inactive'},
+  ],
+  creditLog:[
+    {type:'add',who:'Admin',target:'TechIPTV',amount:100,date:'2025-06-08',note:'Recarga mensual'},
+    {type:'transfer',who:'TechIPTV',target:'Carlos Méndez',amount:5,date:'2025-06-07',note:'Renovación'},
+    {type:'sub',who:'Admin',target:'Ana Torres',amount:2,date:'2025-06-05',note:'Suspensión'},
+    {type:'add',who:'Admin',target:'StreamPlus',amount:50,date:'2025-06-03',note:'Recarga inicial'},
+    {type:'transfer',who:'StreamPlus',target:'Juan Pérez',amount:3,date:'2025-06-01',note:'Plan básico'},
+  ]
+};
+
+function showPage(p){
+  document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(el=>el.classList.remove('active'));
+  document.getElementById('page-'+p).classList.add('active');
+  const pages=['dashboard','users','resellers','credits'];
+  document.querySelectorAll('.nav-btn')[pages.indexOf(p)].classList.add('active');
+  if(p==='dashboard')renderDashboard();
+  if(p==='users')renderUsers();
+  if(p==='resellers')renderResellers();
+  if(p==='credits')renderCredits();
+}
+
+function statusBadge(s){
+  const map={active:'Activo',inactive:'Inactivo',suspended:'Suspendido',trial:'Prueba'};
+  return `<span class="badge ${s}">${map[s]||s}</span>`;
+}
+
+function renderUsers(filter='',statusFilter=''){
+  const tbody=document.getElementById('users-tbody');
+  const f=(filter||document.getElementById('user-search')?.value||'').toLowerCase();
+  const sf=statusFilter!==undefined?statusFilter:(document.getElementById('user-status-filter')?.value||'');
+  const list=state.users.filter(u=>{
+    const matchText=u.name.toLowerCase().includes(f)||u.user.toLowerCase().includes(f)||u.email.toLowerCase().includes(f);
+    const matchStatus=!sf||u.status===sf;
+    return matchText&&matchStatus;
+  });
+  tbody.innerHTML=list.length?list.map(u=>`
+    <tr>
+      <td><div class="user-cell"><div class="avatar ${av(u.name)}">${initials(u.name)}</div><div class="user-info"><div class="name">${u.name}</div><div class="sub">${u.user}</div></div></div></td>
+      <td>${statusBadge(u.status)}</td>
+      <td style="font-size:12px;color:var(--color-text-secondary)">${u.reseller}</td>
+      <td><div class="credits-cell"><i class="ti ti-coin" aria-hidden="true" style="font-size:14px;color:#854F0B"></i><span class="credits-num ${u.credits<3?'credits-low':'credits-ok'}">${u.credits}</span></div></td>
+      <td style="font-size:12px">${u.maxConn}x</td>
+      <td style="font-size:12px;color:var(--color-text-secondary)">${u.expiry}</td>
+      <td><div class="action-row">
+        <button class="btn" style="padding:5px 8px;font-size:12px" onclick="editUser(${u.id})" title="Editar"><i class="ti ti-edit" aria-hidden="true"></i></button>
+        <button class="btn success" style="padding:5px 8px;font-size:12px" onclick="adjustCreditsUser(${u.id})" title="Créditos"><i class="ti ti-coin" aria-hidden="true"></i></button>
+        <button class="btn danger" style="padding:5px 8px;font-size:12px" onclick="toggleUser(${u.id})" title="Suspender/Activar"><i class="ti ti-player-pause" aria-hidden="true"></i></button>
+      </div></td>
+    </tr>`).join(''):`<tr><td colspan="7" class="empty"><i class="ti ti-search" aria-hidden="true"></i><br>No se encontraron usuarios</td></tr>`;
+}
+
+function filterUsers(v){renderUsers(v)}
+function filterUserStatus(v){renderUsers('',v)}
+
+function renderResellers(){
+  const el=document.getElementById('resellers-list');
+  el.innerHTML=state.resellers.map(r=>`
+    <div class="reseller-card">
+      <div class="reseller-header">
+        <div class="user-cell"><div class="avatar ${av(r.name)}" style="width:36px;height:36px;font-size:13px">${initials(r.name)}</div><div class="user-info"><div class="name" style="font-size:14px">${r.name}</div><div class="sub">${r.contact} · ${r.email}</div></div></div>
+        ${statusBadge(r.status)}
+      </div>
+      <div class="reseller-meta">
+        <div class="reseller-stat"><div class="reseller-stat-label"><i class="ti ti-users" aria-hidden="true" style="font-size:12px"></i> Usuarios</div><div class="reseller-stat-value blue">${r.users}</div></div>
+        <div class="reseller-stat"><div class="reseller-stat-label"><i class="ti ti-coin" aria-hidden="true" style="font-size:12px"></i> Créditos</div><div class="reseller-stat-value amber">${r.credits}</div></div>
+        <div class="reseller-stat"><div class="reseller-stat-label"><i class="ti ti-chart-bar" aria-hidden="true" style="font-size:12px"></i> Ratio uso</div><div class="reseller-stat-value">${r.users>0?Math.round((r.users/r.credits)*100):0}%</div></div>
+      </div>
+      <div class="reseller-actions">
+        <button class="btn" style="font-size:12px" onclick="addCreditsReseller(${r.id})"><i class="ti ti-coin" aria-hidden="true"></i>Añadir créditos</button>
+        <button class="btn" style="font-size:12px" onclick="editReseller(${r.id})"><i class="ti ti-edit" aria-hidden="true"></i>Editar</button>
+        <button class="btn danger" style="font-size:12px" onclick="toggleReseller(${r.id})"><i class="ti ti-player-pause" aria-hidden="true"></i>${r.status==='active'?'Suspender':'Activar'}</button>
+      </div>
+    </div>`).join('');
+}
+
+function logHtml(log){
+  const icons={add:'ti-plus',sub:'ti-minus',transfer:'ti-transfer'};
+  const labels={add:'Añadidos a','sub:'Deducidos de','transfer:'Transferido a'};
+  return log.map(l=>`
+    <div class="ch-item">
+      <div class="ch-icon ${l.type}"><i class="ti ${icons[l.type]}" aria-hidden="true" style="font-size:13px"></i></div>
+      <div class="ch-desc"><div class="ch-who">${l.who}</div><div class="ch-detail">${labels[l.type]} ${l.target} · ${l.note} · ${l.date}</div></div>
+      <div class="ch-amount ${l.type==='sub'?'neg':'pos'}">${l.type==='sub'?'-':'+'}${l.amount}</div>
+    </div>`).join('');
+}
+
+function renderCredits(){
+  const total=state.resellers.reduce((a,r)=>a+r.credits,0)+state.users.reduce((a,u)=>a+u.credits,0);
+  const assigned=state.users.reduce((a,u)=>a+u.credits,0);
+  document.getElementById('cr-total').textContent=total;
+  document.getElementById('cr-assigned').textContent=assigned;
+  document.getElementById('cr-available').textContent=state.resellers.reduce((a,r)=>a+r.credits,0);
+  document.getElementById('credits-log').innerHTML=logHtml(state.creditLog);
+}
+
+function renderDashboard(){
+  const active=state.users.filter(u=>u.status==='active').length;
+  document.getElementById('m-total').textContent=state.users.length;
+  document.getElementById('m-active').textContent=active;
+  document.getElementById('m-resellers').textContent=state.resellers.length;
+  const totalCr=state.resellers.reduce((a,r)=>a+r.credits,0)+state.users.reduce((a,u)=>a+u.credits,0);
+  document.getElementById('m-credits').textContent=totalCr;
+  document.getElementById('dash-activity').innerHTML=logHtml(state.creditLog.slice(0,5));
+}
+
+function closeModal(){document.getElementById('modals').innerHTML=''}
+
+function openModal(type){
+  let html='';
+  if(type==='add-user'){
+    html=`<div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+      <div class="modal">
+        <div class="modal-title">Nuevo usuario <button class="modal-close" onclick="closeModal()"><i class="ti ti-x" aria-hidden="true"></i></button></div>
+        <div class="form-row-2"><div><label class="form-label">Nombre completo</label><input class="form-input" id="nu-name" placeholder="Carlos Méndez"></div><div><label class="form-label">Usuario</label><input class="form-input" id="nu-user" placeholder="cmendez"></div></div>
+        <div class="form-row"><label class="form-label">Email</label><input class="form-input" id="nu-email" placeholder="carlos@mail.com"></div>
+        <div class="form-row-2"><div><label class="form-label">Contraseña</label><input class="form-input" id="nu-pass" type="password" placeholder="••••••"></div><div><label class="form-label">Créditos iniciales</label><input class="form-input" id="nu-credits" type="number" value="1" min="0"></div></div>
+        <div class="form-row-2">
+          <div><label class="form-label">Revendedor</label><select class="form-input" id="nu-reseller">${state.resellers.map(r=>`<option>${r.name}</option>`).join('')}</select></div>
+          <div><label class="form-label">Conexiones máx.</label><select class="form-input" id="nu-conn"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></div>
+        </div>
+        <div class="form-row"><label class="form-label">Fecha de expiración</label><input class="form-input" id="nu-exp" type="date" value="2025-12-31"></div>
+        <div class="modal-footer"><button class="btn" onclick="closeModal()">Cancelar</button><button class="btn primary" onclick="saveUser()">Crear usuario</button></div>
+      </div></div>`;
+  } else if(type==='add-reseller'){
+    html=`<div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+      <div class="modal">
+        <div class="modal-title">Nuevo revendedor <button class="modal-close" onclick="closeModal()"><i class="ti ti-x" aria-hidden="true"></i></button></div>
+        <div class="form-row-2"><div><label class="form-label">Nombre empresa</label><input class="form-input" id="nr-name" placeholder="TechIPTV"></div><div><label class="form-label">Contacto</label><input class="form-input" id="nr-contact" placeholder="Pedro Núñez"></div></div>
+        <div class="form-row"><label class="form-label">Email</label><input class="form-input" id="nr-email" placeholder="pedro@techiptv.com"></div>
+        <div class="form-row"><label class="form-label">Créditos iniciales</label><input class="form-input" id="nr-credits" type="number" value="10" min="0"></div>
+        <div class="modal-footer"><button class="btn" onclick="closeModal()">Cancelar</button><button class="btn primary" onclick="saveReseller()">Crear revendedor</button></div>
+      </div></div>`;
+  } else if(type==='add-credits'){
+    html=`<div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+      <div class="modal">
+        <div class="modal-title">Añadir créditos <button class="modal-close" onclick="closeModal()"><i class="ti ti-x" aria-hidden="true"></i></button></div>
+        <div class="form-row"><label class="form-label">Destinatario</label>
+          <select class="form-input" id="ac-target">
+            <optgroup label="Revendedores">${state.resellers.map(r=>`<option value="R:${r.id}">${r.name}</option>`).join('')}</optgroup>
+            <optgroup label="Usuarios">${state.users.map(u=>`<option value="U:${u.id}">${u.name}</option>`).join('')}</optgroup>
+          </select></div>
+        <div class="form-row"><label class="form-label">Cantidad de créditos</label><input class="form-input" id="ac-amount" type="number" value="10" min="1"></div>
+        <div class="form-row"><label class="form-label">Nota</label><input class="form-input" id="ac-note" placeholder="Recarga mensual..."></div>
+        <div class="modal-footer"><button class="btn" onclick="closeModal()">Cancelar</button><button class="btn primary" onclick="doAddCredits()">Añadir</button></div>
+      </div></div>`;
+  } else if(type==='transfer-credits'){
+    html=`<div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+      <div class="modal">
+        <div class="modal-title">Transferir créditos <button class="modal-close" onclick="closeModal()"><i class="ti ti-x" aria-hidden="true"></i></button></div>
+        <div class="form-row"><label class="form-label">Origen</label>
+          <select class="form-input" id="tr-from">
+            <optgroup label="Revendedores">${state.resellers.map(r=>`<option value="R:${r.id}">${r.name} (${r.credits} cr.)</option>`).join('')}</optgroup>
+          </select></div>
+        <div class="form-row"><label class="form-label">Destino</label>
+          <select class="form-input" id="tr-to">
+            <optgroup label="Usuarios">${state.users.map(u=>`<option value="U:${u.id}">${u.name} (${u.credits} cr.)</option>`).join('')}</optgroup>
+            <optgroup label="Revendedores">${state.resellers.map(r=>`<option value="R:${r.id}">${r.name}</option>`).join('')}</optgroup>
+          </select></div>
+        <div class="form-row"><label class="form-label">Cantidad</label><input class="form-input" id="tr-amount" type="number" value="5" min="1"></div>
+        <div class="modal-footer"><button class="btn" onclick="closeModal()">Cancelar</button><button class="btn primary" onclick="doTransfer()">Transferir</button></div>
+      </div></div>`;
+  }
+  document.getElementById('modals').innerHTML=html;
+}
+
+function saveUser(){
+  const name=document.getElementById('nu-name').value||'Nuevo Usuario';
+  const user=document.getElementById('nu-user').value||'usuario'+Date.now();
+  const email=document.getElementById('nu-email').value||'';
+  const credits=parseInt(document.getElementById('nu-credits').value)||0;
+  const reseller=document.getElementById('nu-reseller').value;
+  const conn=parseInt(document.getElementById('nu-conn').value)||1;
+  const exp=document.getElementById('nu-exp').value||'2025-12-31';
+  state.users.push({id:Date.now(),name,user,email,status:'active',reseller,credits,maxConn:conn,expiry:exp});
+  state.creditLog.unshift({type:'add',who:'Admin',target:name,amount:credits,date:new Date().toISOString().split('T')[0],note:'Alta de usuario'});
+  closeModal();renderUsers();
+}
+
+function saveReseller(){
+  const name=document.getElementById('nr-name').value||'Revendedor';
+  const contact=document.getElementById('nr-contact').value||'';
+  const email=document.getElementById('nr-email').value||'';
+  const credits=parseInt(document.getElementById('nr-credits').value)||0;
+  state.resellers.push({id:Date.now(),name,contact,email,credits,users:0,status:'active'});
+  state.creditLog.unshift({type:'add',who:'Admin',target:name,amount:credits,date:new Date().toISOString().split('T')[0],note:'Alta de revendedor'});
+  closeModal();renderResellers();
+}
+
+function doAddCredits(){
+  const target=document.getElementById('ac-target').value;
+  const amount=parseInt(document.getElementById('ac-amount').value)||0;
+  const note=document.getElementById('ac-note').value||'';
+  const [type,id]=target.split(':');
+  let targetName='';
+  if(type==='R'){const r=state.resellers.find(r=>r.id==id);if(r){r.credits+=amount;targetName=r.name;}}
+  else{const u=state.users.find(u=>u.id==id);if(u){u.credits+=amount;targetName=u.name;}}
+  state.creditLog.unshift({type:'add',who:'Admin',target:targetName,amount,date:new Date().toISOString().split('T')[0],note});
+  closeModal();renderCredits();
+}
+
+function doTransfer(){
+  const from=document.getElementById('tr-from').value;
+  const to=document.getElementById('tr-to').value;
+  const amount=parseInt(document.getElementById('tr-amount').value)||0;
+  const [ft,fid]=from.split(':');
+  const [tt,tid]=to.split(':');
+  let fromName='',toName='';
+  if(ft==='R'){const r=state.resellers.find(r=>r.id==fid);if(r&&r.credits>=amount){r.credits-=amount;fromName=r.name;}}
+  if(tt==='U'){const u=state.users.find(u=>u.id==tid);if(u){u.credits+=amount;toName=u.name;}}
+  else if(tt==='R'){const r=state.resellers.find(r=>r.id==tid);if(r){r.credits+=amount;toName=r.name;}}
+  state.creditLog.unshift({type:'transfer',who:fromName||'Admin',target:toName,amount,date:new Date().toISOString().split('T')[0],note:'Transferencia manual'});
+  closeModal();renderCredits();
+}
+
+function toggleUser(id){
+  const u=state.users.find(u=>u.id===id);
+  if(u){u.status=u.status==='active'?'suspended':u.status==='suspended'?'active':u.status;renderUsers();}
+}
+
+function toggleReseller(id){
+  const r=state.resellers.find(r=>r.id===id);
+  if(r){r.status=r.status==='active'?'inactive':'active';renderResellers();}
+}
+
+function editUser(id){
+  const u=state.users.find(u=>u.id===id);if(!u)return;
+  const html=`<div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+    <div class="modal">
+      <div class="modal-title">Editar usuario — ${u.name} <button class="modal-close" onclick="closeModal()"><i class="ti ti-x" aria-hidden="true"></i></button></div>
+      <div class="form-row"><label class="form-label">Estado</label>
+        <select class="form-input" id="eu-status">
+          <option value="active" ${u.status==='active'?'selected':''}>Activo</option>
+          <option value="inactive" ${u.status==='inactive'?'selected':''}>Inactivo</option>
+          <option value="suspended" ${u.status==='suspended'?'selected':''}>Suspendido</option>
+          <option value="trial" ${u.status==='trial'?'selected':''}>Prueba</option>
+        </select></div>
+      <div class="form-row-2">
+        <div><label class="form-label">Conexiones máx.</label><select class="form-input" id="eu-conn"><option value="1" ${u.maxConn===1?'selected':''}>1</option><option value="2" ${u.maxConn===2?'selected':''}>2</option><option value="3" ${u.maxConn===3?'selected':''}>3</option></select></div>
+        <div><label class="form-label">Expira</label><input class="form-input" id="eu-exp" type="date" value="${u.expiry}"></div>
+      </div>
+      <div class="modal-footer"><button class="btn" onclick="closeModal()">Cancelar</button><button class="btn primary" onclick="saveEditUser(${id})">Guardar</button></div>
+    </div></div>`;
+  document.getElementById('modals').innerHTML=html;
+}
+
+function saveEditUser(id){
+  const u=state.users.find(u=>u.id===id);if(!u)return;
+  u.status=document.getElementById('eu-status').value;
+  u.maxConn=parseInt(document.getElementById('eu-conn').value);
+  u.expiry=document.getElementById('eu-exp').value;
+  closeModal();renderUsers();
+}
+
+function adjustCreditsUser(id){
+  const u=state.users.find(u=>u.id===id);if(!u)return;
+  const html=`<div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+    <div class="modal">
+      <div class="modal-title">Créditos — ${u.name} <button class="modal-close" onclick="closeModal()"><i class="ti ti-x" aria-hidden="true"></i></button></div>
+      <div style="text-align:center;padding:1rem 0"><div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:4px">Créditos actuales</div><div style="font-size:32px;font-weight:500;color:#185FA5">${u.credits}</div></div>
+      <div class="form-row"><label class="form-label">Ajuste (positivo para añadir, negativo para quitar)</label><input class="form-input" id="adj-amount" type="number" value="1"></div>
+      <div class="form-row"><label class="form-label">Nota</label><input class="form-input" id="adj-note" placeholder="Motivo..."></div>
+      <div class="modal-footer"><button class="btn" onclick="closeModal()">Cancelar</button><button class="btn primary" onclick="doAdjust(${id})">Aplicar</button></div>
+    </div></div>`;
+  document.getElementById('modals').innerHTML=html;
+}
+
+function doAdjust(id){
+  const u=state.users.find(u=>u.id===id);if(!u)return;
+  const amount=parseInt(document.getElementById('adj-amount').value)||0;
+  const note=document.getElementById('adj-note').value||'Ajuste manual';
+  u.credits=Math.max(0,u.credits+amount);
+  state.creditLog.unshift({type:amount>=0?'add':'sub',who:'Admin',target:u.name,amount:Math.abs(amount),date:new Date().toISOString().split('T')[0],note});
+  closeModal();renderUsers();
+}
+
+function addCreditsReseller(id){
+  const r=state.resellers.find(r=>r.id===id);if(!r)return;
+  const html=`<div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+    <div class="modal">
+      <div class="modal-title">Créditos — ${r.name} <button class="modal-close" onclick="closeModal()"><i class="ti ti-x" aria-hidden="true"></i></button></div>
+      <div style="text-align:center;padding:1rem 0"><div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:4px">Créditos actuales</div><div style="font-size:32px;font-weight:500;color:#185FA5">${r.credits}</div></div>
+      <div class="form-row"><label class="form-label">Créditos a añadir</label><input class="form-input" id="rcr-amount" type="number" value="50" min="1"></div>
+      <div class="form-row"><label class="form-label">Nota</label><input class="form-input" id="rcr-note" placeholder="Recarga..."></div>
+      <div class="modal-footer"><button class="btn" onclick="closeModal()">Cancelar</button><button class="btn primary" onclick="doResellerCredits(${id})">Añadir</button></div>
+    </div></div>`;
+  document.getElementById('modals').innerHTML=html;
+}
+
+function doResellerCredits(id){
+  const r=state.resellers.find(r=>r.id===id);if(!r)return;
+  const amount=parseInt(document.getElementById('rcr-amount').value)||0;
+  const note=document.getElementById('rcr-note').value||'Recarga';
+  r.credits+=amount;
+  state.creditLog.unshift({type:'add',who:'Admin',target:r.name,amount,date:new Date().toISOString().split('T')[0],note});
+  closeModal();renderResellers();
+}
+
+function editReseller(id){
+  const r=state.resellers.find(r=>r.id===id);if(!r)return;
+  const html=`<div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+    <div class="modal">
+      <div class="modal-title">Editar — ${r.name} <button class="modal-close" onclick="closeModal()"><i class="ti ti-x" aria-hidden="true"></i></button></div>
+      <div class="form-row-2"><div><label class="form-label">Nombre empresa</label><input class="form-input" id="er-name" value="${r.name}"></div><div><label class="form-label">Contacto</label><input class="form-input" id="er-contact" value="${r.contact}"></div></div>
+      <div class="form-row"><label class="form-label">Email</label><input class="form-input" id="er-email" value="${r.email}"></div>
+      <div class="modal-footer"><button class="btn" onclick="closeModal()">Cancelar</button><button class="btn primary" onclick="doEditReseller(${id})">Guardar</button></div>
+    </div></div>`;
+  document.getElementById('modals').innerHTML=html;
+}
+
+function doEditReseller(id){
+  const r=state.resellers.find(r=>r.id===id);if(!r)return;
+  r.name=document.getElementById('er-name').value||r.name;
+  r.contact=document.getElementById('er-contact').value||r.contact;
+  r.email=document.getElementById('er-email').value||r.email;
+  closeModal();renderResellers();
+}
+
+renderDashboard();
+</script>
