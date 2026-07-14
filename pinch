@@ -3,14 +3,7 @@
         "name": "Paraguay",
         "samples": [
            
-            {
-               "name": "GEN TV",
-                "url": "https://cdn-py.cvattv.com.ar/live/c7eds/GEN_TV/SA_Live_dash_enc/GEN_TV.mpd?ck=eyI0OWViOTI0YmE5OThjYTdmYmJhZWUzMGRjZWYxZWNiNCI6IjZlMTMxYjA0YjJlODc1OThmYjU4OGFjMjA1NjczNjk4In0%3D&headers=eyJPcmlnaW4iOiJodHRwczovL3BvcnRhbC5hcHAuZmxvdy5jb20ucHkiLCJyZWZlcmVyIjoiaHR0cHM6Ly9wb3J0YWwuYXBwLmZsb3cuY29tLnB5LyJ9",
-                "icono": "https://solparaguay.qvixprimary.com/assets/resources/img/channels/gen_024aa528d36c4e31aa00c436f3a82f15.png",
-                "type": "hls",
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-                }
-            },
+            
             {
                 "name": "DIRECTV +",
                 "url": "https:\/\/otte.live.fly.ww.aiv-cdn.net\/gru-nitro\/live\/clients\/dash-sd\/enc\/kp7qfx2tly\/out\/v1\/bbfb730b45b74d4ea875d75786ea3f13\/cenc-sd.mpd",
