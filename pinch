@@ -2,20 +2,6 @@
     {
         "name": "Paraguay",
         "samples": [
-           
-            
-            {
-                "name": "DIRECTV +",
-                "url": "https:\/\/otte.live.fly.ww.aiv-cdn.net\/gru-nitro\/live\/clients\/dash-sd\/enc\/kp7qfx2tly\/out\/v1\/bbfb730b45b74d4ea875d75786ea3f13\/cenc-sd.mpd",
-                "icono": "https:\/\/i.ibb.co\/jkTvMpKH\/DTV-sports-logo-white.png",
-                "type": "CLEARKEY",
-                "drm_license_uri": "https:\/\/mundodeportes.online\/pandatv\/flow\/keys.php?keyid=8afa490e1640be969729fb459182e4ec&key=6f129820cdd5b6978a98c604c72cf05b",
-                "headers": {
-                    "Origin": "https:\/\/portal.app.flow.com.ar",
-                    "Referer": "https:\/\/portal.app.flow.com.ar\/",
-                    "User-Agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/133.0.0.0 Safari\/537.36"
-                }
-            },
             {
                 "name": "CHILEVISION",
                 "url": "https:\/\/cirrus.trapemn.tv:11936\/Chilevision\/video.m3u8",
