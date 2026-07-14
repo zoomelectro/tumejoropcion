@@ -2,8 +2,7 @@
     {
         "name": "Paraguay",
         "samples": [
-     {
-              
+         
             {
                 "name": "CHILEVISION",
                 "url": "https://cirrus.trapemn.tv:11936/Chilevision/video.m3u8",
