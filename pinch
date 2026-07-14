@@ -16,8 +16,8 @@
             },
             {
                 "name": "CHILEVISION",
-                "url": "https:\/\/cirrus.trapemn.tv:11936\/Chilevision\/video.m3u8",
-                "icono": "https:\/\/i.postimg.cc\/L8LD13FW\/images-(2).png",
+                "url": "https://cirrus.trapemn.tv:11936/Chilevision/video.m3u8",
+                "icono": "https://i.postimg.cc/L8LD13FW/images-(2).png",
                 "type": "HLS",
                 "drm_license_uri": ""
             },
