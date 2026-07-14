@@ -1,50 +1,6 @@
  [
    
-        {
-          "name": "ESPN MUNDIAL",
-          "type": "CLEARKEY",
-          "icono": "https://i.ibb.co/Z6DkDPzs/ESPN.png",
-          "drm_license_uri": "kid:6IS3EasRG-uKe6HnvL3Jvw,k:y4nuOWFZnj5kilqtYIlfNA",
-          "original_url": "http://flow-cdn-gcp.app.flow.com.ar/live/c3eds/ESPN2HD/SA_Live_dash_enc/ESPN2HD.mpd",
-          "headers": {
-            "Origin": "https://portal.app.flow.com.py",
-            "Referer": "https://portal.app.flow.com.py/",
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-          },
-          "globalIndex": 6,
-          "category": "🏆MUNDIAL FIFA 2026🏆",
-          "source_group": "samples"
-        },
-        {
-          "name": "ESPN MUNDIAL 2",
-          "type": "CLEARKEY",
-          "icono": "https://i.ibb.co/Z6DkDPzs/ESPN.png",
-          "drm_license_uri": "kid:6IS3EasRG-uKe6HnvL3Jvw,k:y4nuOWFZnj5kilqtYIlfNA",
-          "original_url": "https://edge6-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzgxNTc1NTM3Iiwic2lwIjoiMTg2LjE1OC4yMDAuMTY1IiwicGF0aCI6Ii9saXZlL2M0ZWRzL0VTUE4yX1BZL1NBX0xpdmVfZGFzaF9lbmMvIiwic2Vzc2lvbl9jZG5faWQiOiJhNTQ1YzZkODk5NDk1ZDU4Iiwic2Vzc2lvbl9pZCI6IjYyNDM0NGNhY2VkMDdiNGZjNWYyNzU1YTZkMjI2MzdiLTE3ODE0MDI3MzctNjUyIiwiY2xpZW50X2lkIjoiZmxvdzo2MDcyNzA3LS1mbG93OjYwNzI3MDc6UCIsImRldmljZV9pZCI6IjYyNDM0NGNhY2VkMDdiNGZjNWYyNzU1YTZkMjI2MzdiIiwibWF4X3Nlc3Npb25zIjowLCJzZXNzaW9uX2R1cmF0aW9uIjowLCJ1cmwiOiJodHRwczovLzIwMS4yMzUuNjYuMTIzIiwiYXVkIjoiMjE5Iiwic291cmNlcyI6Wzg1LDE0NCwyMTAsODYsODhdfQ==.Eok0u3xCiLSHirL6CRxGgRQEBag0odUVfZmZn5e3gn8P9wagmLZhvQQaIMoJkPrPt_VsPsWM353-ukpup3CJMA==/live/c3eds/ESPN2HD/SA_Live_dash_enc/ESPN2HD.mpd",
-          "headers": {
-            "Origin": "https://portal.app.flow.com.py",
-            "Referer": "https://portal.app.flow.com.py/",
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-          },
-          "globalIndex": 7,
-          "category": "🏆MUNDIAL FIFA 2026🏆",
-          "source_group": "samples"
-        },
-        {
-          "name": "FOX MUNDIAL",
-          "type": "CLEARKEY",
-          "icono": "https://i.ibb.co/qMtfTcK0/fox.png",
-          "drm_license_uri": "kid:y8Kgx6ON8KozM81xhB07DQ,k:qsYbcw4qwd8j8ehy51QcGw",
-          "original_url": "https://edge6-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzgxNTc1NTM3Iiwic2lwIjoiMTg2LjE1OC4yMDAuMTY1IiwicGF0aCI6Ii9saXZlL2M0ZWRzL0VTUE4yX1BZL1NBX0xpdmVfZGFzaF9lbmMvIiwic2Vzc2lvbl9jZG5faWQiOiJhNTQ1YzZkODk5NDk1ZDU4Iiwic2Vzc2lvbl9pZCI6IjYyNDM0NGNhY2VkMDdiNGZjNWYyNzU1YTZkMjI2MzdiLTE3ODE0MDI3MzctNjUyIiwiY2xpZW50X2lkIjoiZmxvdzo2MDcyNzA3LS1mbG93OjYwNzI3MDc6UCIsImRldmljZV9pZCI6IjYyNDM0NGNhY2VkMDdiNGZjNWYyNzU1YTZkMjI2MzdiIiwibWF4X3Nlc3Npb25zIjowLCJzZXNzaW9uX2R1cmF0aW9uIjowLCJ1cmwiOiJodHRwczovLzIwMS4yMzUuNjYuMTIzIiwiYXVkIjoiMjE5Iiwic291cmNlcyI6Wzg1LDE0NCwyMTAsODYsODhdfQ==.Eok0u3xCiLSHirL6CRxGgRQEBag0odUVfZmZn5e3gn8P9wagmLZhvQQaIMoJkPrPt_VsPsWM353-ukpup3CJMA==/live/c3eds/FoxSports/SA_Live_dash_enc/FoxSports.mpd",
-          "headers": {
-            "Origin": "https://portal.app.flow.com.py",
-            "Referer": "https://portal.app.flow.com.py/",
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-          },
-          "globalIndex": 8,
-          "category": "🏆MUNDIAL FIFA 2026🏆",
-          "source_group": "samples"
-        },
+       
         {
           "name": "GLOBO MINAS",
           "type": "HLS",
