@@ -190,7 +190,7 @@
                 }
             },
             {
-                "name": "TRECE PY",
+                "name": "TRECEx PY",
                 "url": "https://cdn-py.cvattv.com.ar/live/c4eds/RPC_C4/SA_Live_dash_enc/RPC_C4.mpd",
                 "icono": "https://solparaguay.qvixprimary.com/assets/resources/img/channels/el-trece_3d05af6c134140ae8c4674d1c26fa937.png",
                 "type": "CLEARKEY",
