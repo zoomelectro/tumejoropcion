@@ -191,14 +191,14 @@
             },
             {
                 "name": "TRECE PY",
-                "url": "https:\/\/cdn-py.cvattv.com.ar\/live\/c4eds\/RPC_C4\/SA_Live_dash_enc\/RPC_C4.mpd",
-                "icono": "https:\/\/solparaguay.qvixprimary.com\/assets\/resources\/img\/channels\/el-trece_3d05af6c134140ae8c4674d1c26fa937.png",
+                "url": "https://cdn-py.cvattv.com.ar/live/c4eds/RPC_C4/SA_Live_dash_enc/RPC_C4.mpd",
+                "icono": "https://solparaguay.qvixprimary.com/assets/resources/img/channels/el-trece_3d05af6c134140ae8c4674d1c26fa937.png",
                 "type": "CLEARKEY",
-                "drm_license_uri": "https:\/\/mundodeportes.online\/pandatv\/flow\/keys.php?keyid=a8093cdcb2d504bd38f16764bd21b6e5&key=bfcf3b033b5f0b5ae020751a6746326f",
+                "drm_license_uri": "https://mundodeportes.online/pandatv/flow/keys.php?keyid=a8093cdcb2d504bd38f16764bd21b6e5&key=bfcf3b033b5f0b5ae020751a6746326f",
                 "headers": {
-                    "Origin": "https:\/\/portal.app.flow.com.py",
-                    "Referer": "https:\/\/portal.app.flow.com.py\/",
-                    "User-Agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/133.0.0.0 Safari\/537.36"
+                    "Origin": "https://portal.app.flow.com.py",
+                    "Referer": "https://portal.app.flow.com.py/",
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
                 }
             },
             {
