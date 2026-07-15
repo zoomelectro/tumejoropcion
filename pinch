@@ -38,16 +38,10 @@
                     "User-Agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/133.0.0.0 Safari\/537.36"
                 }
             },
-            {
-                "name": "CHILEVISION",
-                "url": "https:\/\/cirrus.trapemn.tv:11936\/Chilevision\/video.m3u8",
-                "icono": "https:\/\/i.postimg.cc\/L8LD13FW\/images-(2).png",
-                "type": "HLS",
-                "drm_license_uri": ""
-            },
+           
             {
                 "name": "GEN TV",
-                "url": "https:\/\/edge-live04-sl.cvattv.com.ar\/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzgzMDYxNzcyIiwic2lwIjoiMTg2LjE1OC4yMDAuMTY1IiwicGF0aCI6Ii9saXZlL2M0ZWRzL1NOVF9DNC9TQV9MaXZlX2Rhc2hfZW5jLyIsInNlc3Npb25fY2RuX2lkIjoiOTg3MDBiYmE3OTFiZmZlMSIsInNlc3Npb25faWQiOiI2M2JlN2U0YTllOWNhYTBmMDA2NmExYzNjZGFhNWFmMi0xNzgyODg4OTc5LTg2MSIsImNsaWVudF9pZCI6ImZsb3c6NjA3MjcwNy0tZmxvdzo2MDcyNzA3OlAiLCJkZXZpY2VfaWQiOiI2M2JlN2U0YTllOWNhYTBmMDA2NmExYzNjZGFhNWFmMiIsIm1heF9zZXNzaW9ucyI6MCwic2Vzc2lvbl9kdXJhdGlvbiI6MCwidXJsIjoiaHR0cHM6Ly8yMDEuMjM1LjY2LjEyMiIsImF1ZCI6IjM2MyIsInNvdXJjZXMiOls4NSwxNDQsMjEwLDg2LDg4XX0=.lfBTFkQKflYxDTh9AZ6FncCO1Ayrpjo3DM4ZBn067zVqxW0aRhfO0w71eVLEJ5i72_S71FIC1w6PjikgUL4Icg==\/live\/c7eds\/GEN_TV\/SA_Live_dash_enc\/GEN_TV.mpd",
+                "url": "https:\/\/cdn-py.cvattv.com.ar\/live\/c7eds\/GEN_TV\/SA_Live_dash_enc\/GEN_TV.mpd",
                 "icono": "https:\/\/solparaguay.qvixprimary.com\/assets\/resources\/img\/channels\/gen_024aa528d36c4e31aa00c436f3a82f15.png",
                 "type": "CLEARKEY",
                 "drm_license_uri": "https:\/\/mundodeportes.online\/pandatv\/flow\/keys.php?keyid=49eb924ba998ca7fbbaee30dcef1ecb4&key=6e131b04b2e87598fb588ac205673698",
