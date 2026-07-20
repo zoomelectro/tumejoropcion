@@ -4,10 +4,15 @@
         "name": "PARAGUAY WIFI PERSONAL",
         "samples": [
  {
-"EXTINF:-1 tvg-logo="https://solparaguay.qvixprimary.com/assets/resources/img/channels/snt_7bc364b8e1b049f495af62b271aa81fe.png" group-title="PARAGUAY WIFI PERSONAL",", SNT",
-"#KODIPROP:inputstream.adaptive.license_type=clearkey",
-"#KODIPROP:inputstream.adaptive.license_key=9f61dcce871cc41aeb206d05028fc30a:9f6248194a3bf5e35b96b194e8624693",
-"https://cdn-py.cvattv.com.ar/live/c4eds/SNT_C4/SA_Live_dash_enc/SNT_C4.mpd?|referer=https://portal.app.flow.com.py/",&origin=https://portal.app.flow.com.py"
+"name": "SNT2"
+"url": "https://cdn-py.cvattv.com.ar/live/c4eds/SNT_C4/SA_Live_dash_enc/SNT_C4.mpd",
+"icono": "https://solparaguay.qvixprimary.com/assets/resources/img/channels/snt_7bc364b8e1b049f495af62b271aa81fe.png",
+"type": "CREARKEY",
+"drm_license_uri": "inputstream.adaptive.license_key=9f61dcce871cc41aeb206d05028fc30a:9f6248194a3bf5e35b96b194e8624693",
+"headers": {
+"origin": "https://portal.app.flow.com.py",
+"Referer": "https://portal.app.flow.com.py/",
+"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
            }
             },
          {
