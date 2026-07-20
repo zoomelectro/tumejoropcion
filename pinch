@@ -6,7 +6,7 @@
  
          {
                 "name": "SNT",
-                "url": "https://cdn-py.cvattv.com.ar//live//c4eds//SNT_C4//SA_Live_dash_enc//SNT_C4.mpd?ck=eyI5ZjYxZGNjZTg3MWNjNDFhZWIyMDZkMDUwMjhmYzMwYSI6IjlmNjI0ODE5NGEzYmY1ZTM1Yjk2YjE5NGU4NjI0NjkzIn0%3D&headers=eyJPcmlnaW4iOiJodHRwczovL3BvcnRhbC5hcHAuZmxvdy5jb20ucHkifQ%3D%3D",
+                "url": "https:\/\/cdn-py.cvattv.com.ar\/live\/c4eds\/SNT_C4\/SA_Live_dash_enc\/SNT_C4.mpd",
                 "icono": "https:\/\/solparaguay.qvixprimary.com\/assets\/resources\/img\/channels\/snt_7bc364b8e1b049f495af62b271aa81fe.png",
                 "type": "CLEARKEY",
                 "drm_license_uri": "https:\/\/mundodeportes.online\/pandatv\/flow\/keys.php?keyid=9f61dcce871cc41aeb206d05028fc30a&key=9f6248194a3bf5e35b96b194e8624693",
