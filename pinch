@@ -9,7 +9,7 @@
                 "url": "https://cdn-py.cvattv.com.ar//live//c4eds//SNT_C4//SA_Live_dash_enc//SNT_C4.mpd?ck=eyI5ZjYxZGNjZTg3MWNjNDFhZWIyMDZkMDUwMjhmYzMwYSI6IjlmNjI0ODE5NGEzYmY1ZTM1Yjk2YjE5NGU4NjI0NjkzIn0%3D&headers=eyJPcmlnaW4iOiJodHRwczovL3BvcnRhbC5hcHAuZmxvdy5jb20ucHkifQ%3D%3D",
                 "icono": "https:\/\/solparaguay.qvixprimary.com\/assets\/resources\/img\/channels\/snt_7bc364b8e1b049f495af62b271aa81fe.png",
                 "type": "HLS",
-                "drm_license_uri": ""
+                "drm_license_uri": "chrome-extension://opmeopcambhfimffbomjgemehjkbbmji/pages/clearkey.html"
                
                 }
             },
