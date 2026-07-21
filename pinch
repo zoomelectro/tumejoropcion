@@ -1,2 +1,20 @@
+#EXTM3U 
 
+#EXTINF:-8tvg-logo="https://television.com.py/wp-content/uploads/2020/10/LogoGENtvpy.jpg" group-title="NACIONALES" ,GEN
+https://tigocloudgen.desdeparaguay.net/gentv/gentv_py_baja/chunklist_w1055064231.m3u8?k=7af6806dbc195fd328e52c494a81335a849444dcf6f216b997d8e332348e7690&exp=1673870657
+
+#EXTINF:-2 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/60/NPY_%28Noticias_Paraguay%29.png" group-title="NACIONALES" ,NPY
+http://170.83.242.152:5350/play/a024
+
+#EXTINF:-4 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/49/Telefuturo2017.png" group-title="NACIONALES", TELEFUTURO
+http://200.41.79.165:8000/play/a0hy/index.m3u8
+
+#EXTINF:-5 tvg-logo="https://i.postimg.cc/vTXJBszc/paravision.png" group-title="NACIONALES", PARAVISIÓN
+http://170.83.242.152:5350/play/a021
+
+#EXTINF:-8 tvg-logo="http://www.unicanal.com.py/public/img/LogoUnicanalBlanco.png" group-title="NACIONALES", UNICANAL
+http://45.55.127.106/live/unicanal_mid.m3u8
+
+#EXTINF:-9 tvg-logo="https://directostv.teleame.com/wp-content/uploads/2017/10/SNT-Paraguay-en-vivo-Online.png" group-title="NACIONALES", SNT
+https://d4xunn272arip.cloudfront.net/hls/snt.m3u8
 
