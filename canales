@@ -17,9 +17,9 @@
     "group": "Paraguay",
     "logo": "https://tu-dominio.com/logos/canal2.png",
     "type": "dash",
-    "url": "https://tu-stream/canal2.mpd",
+    "url": "https://cdn-py.cvattv.com.ar/live/c4eds/SNT_C4/SA_Live_dash_enc/SNT_C4.mpd",
     "drm": {
-      "clearKeys": { "keyIdHex": "keyHex" }
+      "clearKeys": { "9f61dcce871cc41aeb206d05028fc30": "9f6248194a3bf5e35b96b194e8624693" }
     }
   }
 ]
